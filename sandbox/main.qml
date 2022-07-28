@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 
+import Qt.labs.settings 1.0
 import Qt.labs.folderlistmodel 2.15
 
 import StatusQ.Components 1.0
@@ -13,10 +14,17 @@ ApplicationWindow {
     width: 1024
     height: 768
     visible: true
-    title: qsTr("StatusQ2 Sandbox")
+    title: qsTr("StatusQ v2 Sandbox")
 
     color: Theme.palette.backgroundColor
     Behavior on color { ColorAnimation { duration: 50 } }
+
+    Settings {
+        property alias x: root.x
+        property alias y: root.y
+        property alias width: root.width
+        property alias height: root.height
+    }
 
     FolderListModel {
         id: folderModel
@@ -54,7 +62,7 @@ ApplicationWindow {
             StatusLabel {
                 anchors.centerIn: parent
                 font.bold: true
-                text: pagesListView.currentItem ? folderModel.get(pagesListView.currentIndex, "fileBaseName") : ""
+                text: folderModel.get(pagesListView.currentIndex, "fileBaseName") ?? ""
             }
             ToolButton {
                 Layout.alignment: Qt.AlignRight

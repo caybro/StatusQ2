@@ -10,6 +10,11 @@ int main(int argc, char *argv[])
   QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
   QGuiApplication app(argc, argv);
 
+  app.setOrganizationName(QStringLiteral("Status"));
+  app.setOrganizationDomain(QStringLiteral("status.im"));
+  app.setApplicationDisplayName(QStringLiteral("StatusQ Sandbox"));
+  app.setApplicationVersion(QStringLiteral("0.1"));
+
   qputenv("QT_QUICK_CONTROLS_HOVER_ENABLED", QByteArrayLiteral("1"));
 
   QQmlApplicationEngine engine;
