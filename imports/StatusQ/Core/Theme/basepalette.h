@@ -29,7 +29,7 @@ class Palette : public QObject
   enum class Type {
     Light,
     Dark,
-    System, // FIXME
+    System,
   };
   Q_ENUM(Type)
 
