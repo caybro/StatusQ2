@@ -6,10 +6,13 @@ import StatusQ.Core.Theme 1.0
 Label {
     color: Theme.palette.textColor
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
-    linkColor: hoverHandler.hovered ? Theme.palette.primaryColor(Palette.Shade60) : Theme.palette.primaryColor()
+    linkColor: hoveredLink ? Theme.palette.primaryColor(Palette.Shade60) : Theme.palette.primaryColor()
     verticalAlignment: Text.AlignVCenter
 
-    onLinkActivated: Qt.openUrlExternally(link)
+    onLinkActivated: {
+        if (link)
+            Qt.openUrlExternally(link)
+    }
 
     HoverHandler {
         id: hoverHandler
