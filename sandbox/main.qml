@@ -81,6 +81,7 @@ ApplicationWindow {
             anchors.margins: 8
             model: folderModel
             currentIndex: -1
+            clip: true
 
             delegate: ItemDelegate {
                 width: ListView.view.width
@@ -95,6 +96,7 @@ ApplicationWindow {
                     drawer.close()
                 }
             }
+            ScrollBar.vertical: ScrollBar {}
         }
     }
 
