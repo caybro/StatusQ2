@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>pages/Colors.qml</file>
+        <file>pages/StatusCheckBoxPage.qml</file>
+        <file>pages/StatusLabelPage.qml</file>
+        <file>pages/StatusRadioButtonPage.qml</file>
+        <file>pages/StatusSwitchPage.qml</file>
+        <file>pages/StatusTextFieldPage.qml</file>
+    </qresource>
+</RCC>

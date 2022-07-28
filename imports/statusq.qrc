@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>StatusQ/Components/qmldir</file>
+        <file>StatusQ/Components/StatusLabel.qml</file>
+        <file>StatusQ/Components/StatusSwitch.qml</file>
+        <file>StatusQ/qmldir</file>
+        <file>StatusQ/Components/StatusCheckBox.qml</file>
+        <file>assets/icons/Checkmark.svg</file>
+        <file>assets/icons/Indeterminate.svg</file>
+        <file>StatusQ/Components/StatusRadioButton.qml</file>
+        <file>assets/fonts/Inter/Inter-Black.otf</file>
+        <file>assets/fonts/Inter/Inter-BlackItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-Bold.otf</file>
+        <file>assets/fonts/Inter/Inter-BoldItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-ExtraBold.otf</file>
+        <file>assets/fonts/Inter/Inter-ExtraBoldItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-ExtraLight.otf</file>
+        <file>assets/fonts/Inter/Inter-ExtraLightItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-Italic.otf</file>
+        <file>assets/fonts/Inter/Inter-Light.otf</file>
+        <file>assets/fonts/Inter/Inter-LightItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-Medium.otf</file>
+        <file>assets/fonts/Inter/Inter-MediumItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-Regular.otf</file>
+        <file>assets/fonts/Inter/Inter-SemiBold.otf</file>
+        <file>assets/fonts/Inter/Inter-SemiBoldItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-Thin.otf</file>
+        <file>assets/fonts/Inter/Inter-ThinItalic.otf</file>
+        <file>assets/fonts/Inter/Inter-V.otf</file>
+        <file>StatusQ/Components/StatusTextField.qml</file>
+    </qresource>
+</RCC>
