@@ -55,7 +55,7 @@ LightPalette::LightPalette(QObject *parent)
 
 QString LightPalette::name() const
 {
-  return tr("Light");
+  return tr("Light", "light theme");
 }
 
 Palette::Type LightPalette::type() const

@@ -55,7 +55,7 @@ DarkPalette::DarkPalette(QObject *parent)
 
 QString DarkPalette::name() const
 {
-  return tr("Dark");
+  return tr("Dark", "dark theme");
 }
 
 Palette::Type DarkPalette::type() const
