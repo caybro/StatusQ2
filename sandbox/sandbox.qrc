@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>pages/Colors.qml</file>
+        <file>pages/ColorsPage.qml</file>
         <file>pages/StatusCheckBoxPage.qml</file>
         <file>pages/StatusLabelPage.qml</file>
         <file>pages/StatusRadioButtonPage.qml</file>

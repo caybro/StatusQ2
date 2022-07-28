@@ -3,6 +3,8 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 
+import Qt.labs.folderlistmodel 2.15
+
 import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
@@ -16,42 +18,13 @@ ApplicationWindow {
     color: Theme.palette.backgroundColor
     Behavior on color { ColorAnimation { duration: 50 } }
 
-    //    Component.onCompleted: {
-    //        Theme.type = Palette.Type.Dark
-    //    }
-
-    ListModel {
-        id: pageModel
-        ListElement {
-            name: "Colors"
-            category: "Basics"
-            source: "pages/Colors.qml"
-        }
-        ListElement {
-            name: "StatusCheckBox"
-            category: "Controls"
-            source: "pages/StatusCheckBoxPage.qml"
-        }
-        ListElement {
-            name: "StatusLabel"
-            category: "Controls"
-            source: "pages/StatusLabelPage.qml"
-        }
-        ListElement {
-            name: "StatusRadioButton"
-            category: "Controls"
-            source: "pages/StatusRadioButtonPage.qml"
-        }
-        ListElement {
-            name: "StatusSwitch"
-            category: "Controls"
-            source: "pages/StatusSwitchPage.qml"
-        }
-        ListElement {
-            name: "StatusTextField"
-            category: "Controls"
-            source: "pages/StatusTextFieldPage.qml"
-        }
+    FolderListModel {
+        id: folderModel
+        folder: "qrc:/pages"
+        nameFilters: ["*.qml"]
+        showDirs: false
+        showDotAndDotDot: false
+        sortField: FolderListModel.Name
     }
 
     header: ToolBar {
@@ -62,9 +35,9 @@ ApplicationWindow {
             Behavior on color { ColorAnimation { duration: 50 } }
         }
 
-        RowLayout {
-            anchors.fill: parent
+        contentItem: RowLayout {
             RowLayout {
+                Layout.alignment: Qt.AlignLeft
                 StatusSwitch {
                     id: themeSwitch
                     checked: Theme.type === Palette.Type.Dark
@@ -81,7 +54,7 @@ ApplicationWindow {
             StatusLabel {
                 anchors.centerIn: parent
                 font.bold: true
-                text: pagesListView.currentItem ? pageModel.get(pagesListView.currentIndex).name : ""
+                text: pagesListView.currentItem ? folderModel.get(pagesListView.currentIndex, "fileBaseName") : ""
             }
             ToolButton {
                 Layout.alignment: Qt.AlignRight
@@ -106,22 +79,18 @@ ApplicationWindow {
             id: pagesListView
             anchors.fill: parent
             anchors.margins: 8
-            model: pageModel
+            model: folderModel
             currentIndex: -1
-            section.property: "category"
-            section.delegate: StatusLabel {
-                text: section
-            }
 
             delegate: ItemDelegate {
                 width: ListView.view.width
-                text: model.name
+                text: model.fileBaseName
                 highlighted: ListView.isCurrentItem
-                font.bold: ListView.isCurrentItem
+                font.bold: highlighted
                 onClicked: {
                     if (index !== ListView.view.currentIndex) {
                         ListView.view.currentIndex = index
-                        stack.push(model.source)
+                        stack.push("qrc" + model.filePath)
                     }
                     drawer.close()
                 }
@@ -140,7 +109,7 @@ ApplicationWindow {
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 32
             font.weight: Font.DemiBold
-            text: "Welcome to StatusQ Sandbox<br><font size='-2'>Choose the page from the menu in the upper left corner</font>"
+            text: "Welcome to StatusQ Sandbox<br><font size='-2'>Choose the page from the menu in the upper right corner</font>"
         }
     }
 }

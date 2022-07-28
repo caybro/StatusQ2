@@ -36,7 +36,7 @@ Pane {
             text: parent.text
         }
         Repeater {
-            model: [Palette.Shade95, Palette.Shade90, Palette.Shade50]
+            model: [Palette.Shade95, Palette.Shade90, Palette.Shade60, Palette.Shade50]
             delegate: Rectangle {
                 id: rect
                 Layout.preferredWidth: childrenRect.width
