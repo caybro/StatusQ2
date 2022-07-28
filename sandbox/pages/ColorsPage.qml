@@ -98,5 +98,10 @@ Pane {
             text: "Warning:"
             color: function(shade) { return Theme.palette.warningColor(shade); }
         }
+
+        ColorRow {
+            text: "Danger:"
+            color: function(shade) { return Theme.palette.dangerColor(shade); }
+        }
     }
 }

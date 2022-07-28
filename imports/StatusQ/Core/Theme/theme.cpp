@@ -1,7 +1,7 @@
 #include "theme.h"
 
-#include "lightpalette.h"
 #include "darkpalette.h"
+#include "lightpalette.h"
 
 #include <QGuiApplication>
 
@@ -26,7 +26,7 @@ void Theme::setType(Palette::Type type)
   emit themeChanged();
 }
 
-Palette* Theme::palette() const
+Palette *Theme::palette() const
 {
   return m_palette.get();
 }

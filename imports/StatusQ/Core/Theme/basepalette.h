@@ -1,10 +1,10 @@
 #pragma once
 
-#include <QmlTypeAndRevisionsRegistration>
-#include <QObject>
 #include <QColor>
+#include <QObject>
+#include <QmlTypeAndRevisionsRegistration>
 
-#include <tuple>
+#include <utility> // std::pair
 
 class Palette : public QObject
 {
@@ -65,22 +65,24 @@ class Palette : public QObject
 
   // common colors
   Q_INVOKABLE QColor neutralColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const;
-  Q_INVOKABLE inline constexpr QColor white(float alpha = 1.f) const {
-    return {255, 255, 255, static_cast<int>(alpha*255)};
+  Q_INVOKABLE inline constexpr QColor white(float alpha = 1.f) const
+  {
+    return {255, 255, 255, static_cast<int>(alpha * 255)};
   }
 
-  // theme specific colors
+  // theme specific colors, to be implemented in light/dark palettes
   Q_INVOKABLE virtual QColor primaryColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
   Q_INVOKABLE virtual QColor successColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
   Q_INVOKABLE virtual QColor infoColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
   Q_INVOKABLE virtual QColor warningColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
+  Q_INVOKABLE virtual QColor dangerColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
 
  protected:
   // helper
-  static constexpr auto getColor = [](const QColor &defaultColor, const auto &container, Palette::Shade shade, float alpha = 1.f) -> QColor {
-    const auto colorIt = std::find_if(std::cbegin(container), std::cend(container), [shade](const Palette::ColorPair &pair) {
-      return shade == pair.first;
-    });
+  static constexpr auto getColor = [](const QColor &defaultColor, const auto &container, Palette::Shade shade,
+                                      float alpha = 1.f) -> QColor {
+    const auto colorIt = std::find_if(std::cbegin(container), std::cend(container),
+                                      [shade](const Palette::ColorPair &pair) { return shade == pair.first; });
 
     if (colorIt == std::cend(container))
       return defaultColor;
@@ -94,7 +96,7 @@ class Palette : public QObject
     return color;
   };
 
-  // theme specific colors
+  // theme specific color properties, to be implemented in light/dark palettes
   virtual QColor backgroundColor() const = 0;
   virtual QColor baseColor() const = 0;
   virtual QColor secondaryBaseColor() const = 0;
@@ -103,15 +105,9 @@ class Palette : public QObject
 
  private:
   // general color properties
-  inline constexpr QColor transparent() const {
-    return QColorConstants::Transparent;
-  }
+  inline constexpr QColor transparent() const { return QColorConstants::Transparent; }
 
   // general palette-related properties
-  inline constexpr float disabledOpacity() const {
-    return 0.5;
-  }
-  inline constexpr float secondaryDisabledOpacity() const {
-    return 0.2;
-  }
+  inline constexpr float disabledOpacity() const { return 0.5; }
+  inline constexpr float secondaryDisabledOpacity() const { return 0.2; }
 };

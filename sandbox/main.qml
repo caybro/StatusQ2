@@ -43,7 +43,8 @@ ApplicationWindow {
             Behavior on color { ColorAnimation { duration: 50 } }
         }
 
-        contentItem: RowLayout {
+        RowLayout {
+            anchors.fill: parent
             RowLayout {
                 Layout.alignment: Qt.AlignLeft
                 StatusSwitch {

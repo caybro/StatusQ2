@@ -22,4 +22,5 @@ class LightPalette final : public Palette
   QColor successColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
   QColor infoColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
   QColor warningColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
+  QColor dangerColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
 };

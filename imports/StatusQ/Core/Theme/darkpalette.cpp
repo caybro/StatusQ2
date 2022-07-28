@@ -13,26 +13,38 @@ constexpr std::array<Palette::ColorPair, 4> kPrimaryColors{{
 }};
 
 constexpr QColor kSuccessDefaultColor{0, 140, 115}; // #008C73
-constexpr std::array<Palette::ColorPair, 3> kSuccessColors{{
-    {Palette::Shade95, {0, 98, 80}},          // #006250
-    {Palette::Shade90, {0, 106, 87}},         //#006A57
-    {Palette::Shade50, kSuccessDefaultColor}, // #008C73
+constexpr std::array<Palette::ColorPair, 4> kSuccessColors{{
+    {Palette::Shade95, {0, 98, 80}},   // #006250
+    {Palette::Shade90, {0, 106, 87}},  // #006A57
+    {Palette::Shade60, {0, 131, 108}}, // #00836C
+    {Palette::Shade50, kSuccessDefaultColor},
     // TODO
 }};
 
 constexpr QColor kInfoDefaultColor{13, 136, 158}; // #0D889E
-constexpr std::array<Palette::ColorPair, 3> kInfoColors{{
+constexpr std::array<Palette::ColorPair, 4> kInfoColors{{
     {Palette::Shade95, {0, 94, 110}},  // #005E6E
     {Palette::Shade90, {0, 102, 120}}, // #006678
+    {Palette::Shade60, {0, 125, 148}}, // #007D94
     {Palette::Shade50, kInfoDefaultColor},
     // TODO
 }};
 
 constexpr QColor kWarningDefaultColor{240, 95, 29}; // #F05F1D
-constexpr std::array<Palette::ColorPair, 3> kWarningColors {{
+constexpr std::array<Palette::ColorPair, 4> kWarningColors{{
     {Palette::Shade95, {168, 57, 7}}, // #A83907
     {Palette::Shade90, {182, 62, 7}}, // #B63E07
+    {Palette::Shade60, {225, 77, 9}}, // #E14D09
     {Palette::Shade50, kWarningDefaultColor},
+    // TODO
+}};
+
+constexpr QColor kDangerDefaultColor{229, 55, 87}; // #E53757
+constexpr std::array<Palette::ColorPair, 4> kDangerColors{{
+    {Palette::Shade95, {160, 26, 50}}, // #A01A32
+    {Palette::Shade90, {174, 28, 55}}, // #AE1C37
+    {Palette::Shade60, {215, 34, 67}}, // #D72243
+    {Palette::Shade50, kDangerDefaultColor},
     // TODO
 }};
 } // namespace
@@ -94,4 +106,9 @@ QColor DarkPalette::infoColor(Shade shade, float alpha) const
 QColor DarkPalette::warningColor(Shade shade, float alpha) const
 {
   return Palette::getColor(kWarningDefaultColor, kWarningColors, shade, alpha);
+}
+
+QColor DarkPalette::dangerColor(Shade shade, float alpha) const
+{
+  return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
 }

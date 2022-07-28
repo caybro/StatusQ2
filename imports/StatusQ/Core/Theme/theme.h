@@ -16,10 +16,10 @@ class Theme : public QObject
   Q_DISABLE_COPY_MOVE(Theme)
 
   Q_PROPERTY(Palette::Type type READ type WRITE setType NOTIFY themeChanged)
-  Q_PROPERTY(Palette* palette READ palette NOTIFY themeChanged)
+  Q_PROPERTY(Palette *palette READ palette NOTIFY themeChanged)
   Q_PROPERTY(QFont font READ font CONSTANT)
 
-  // metrics
+  // TODO metrics
 
  public:
   explicit Theme(QObject *parent = nullptr);
@@ -31,8 +31,9 @@ class Theme : public QObject
   Palette::Type type() const;
   void setType(Palette::Type type);
 
-  Palette* palette() const;
+  Palette *palette() const;
   std::unique_ptr<Palette> m_palette;
 
+  // fonts are setup/loaded in plugin.cpp
   QFont font() const;
 };
