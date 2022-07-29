@@ -6,7 +6,7 @@ import StatusQ.Core.Theme 1.0
 RadioButton {
     id: root
     padding: 2
-    spacing: 2
+    spacing: 4
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
 
     indicator: Rectangle {

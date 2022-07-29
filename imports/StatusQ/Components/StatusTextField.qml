@@ -18,7 +18,7 @@ TextField {
 
     font.weight: Font.Medium
 
-    property int spacing: 8
+    property int spacing: 4
 
     enum Type {
         Normal,
