@@ -2,6 +2,8 @@ TEMPLATE = lib
 TARGET = StatusThemePlugin
 CONFIG += qt plugin c++17
 
+QMAKE_LFLAGS += $$(LDFLAGS)
+
 QT += quick
 
 CONFIG += qmltypes

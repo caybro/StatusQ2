@@ -33,20 +33,21 @@ Pane {
         property string text
         property var color
         StatusLabel {
+            Layout.preferredWidth: 100
             text: parent.text
         }
         Repeater {
             model: [Palette.Shade95, Palette.Shade90, Palette.Shade60, Palette.Shade50]
             delegate: Rectangle {
                 id: rect
-                Layout.preferredWidth: childrenRect.width
+                Layout.preferredWidth: 100
                 Layout.preferredHeight: childrenRect.height
                 color: row.color(modelData)
                 StatusLabel {
                     padding: 8
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData).arg(parent.color)
-                    color: Theme.palette.backgroundColor
+                    color: Theme.palette.white() // FIXME contrast color
                 }
             }
         }
@@ -77,6 +78,11 @@ Pane {
             opacity: Theme.palette.disabledOpacity
             textColor: Theme.palette.secondaryTextColor
             text: "<b>Neutral secondary disabled</b><br>Text: %1<br>Base: %2".arg(textColor).arg(color)
+        }
+
+        ColorRow {
+            text: "Neutral:"
+            color: function(shade) { return Theme.palette.neutralColor(shade); }
         }
 
         ColorRow {
