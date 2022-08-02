@@ -111,10 +111,6 @@ ApplicationWindow {
     StackView {
         id: stack
         anchors.fill: parent
-        background: Rectangle {
-            color: Theme.palette.backgroundColor
-            Behavior on color { ColorAnimation { duration: 50 } }
-        }
         initialItem: Label {
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 32

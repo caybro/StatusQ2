@@ -29,5 +29,6 @@
         <file>StatusqTheme/RadioButton.qml</file>
         <file>StatusqTheme/Switch.qml</file>
         <file>StatusqTheme/TextField.qml</file>
+        <file>StatusqTheme/AbstractButton.qml</file>
     </qresource>
 </RCC>

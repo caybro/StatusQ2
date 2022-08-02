@@ -25,4 +25,11 @@ T.ItemDelegate {
         text: root.text
         font: root.font
     }
+
+    background: Rectangle {
+        implicitWidth: 100
+        implicitHeight: 40
+        visible: root.down || root.highlighted || root.visualFocus
+        color: Theme.palette.baseColor
+    }
 }
