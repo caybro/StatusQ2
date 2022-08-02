@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
-import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
 Pane {
@@ -16,17 +15,17 @@ Pane {
     ColumnLayout {
         width: parent.width
 
-        StatusLabel {
+        Label {
             text: "Plain text label"
         }
-        StatusLabel {
+        Label {
             enabled: false
             text: "Disabled plain text label"
         }
-        StatusLabel {
+        Label {
              text: "<b>Bold</b> <i>italic</i> <u>underline</u>"
         }
-        StatusLabel {
+        Label {
              text: "With a <a href='https://status.im'>hypertext link</a>"
         }
     }

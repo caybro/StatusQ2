@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
-import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
 Pane {
@@ -15,19 +14,19 @@ Pane {
 
     ColumnLayout {
         width: parent.width
-        StatusTextField {
+        TextField {
             placeholderText: "Edit me"
         }
-        StatusTextField {
+        TextField {
             enabled: false
             text: "Disabled Text Field"
         }
-        StatusTextField {
-            type: StatusTextField.Type.Success
+        TextField {
+            type: TextField.Type.Success
             placeholderText: "Success!!!"
         }
-        StatusTextField {
-            type: StatusTextField.Type.Warning
+        TextField {
+            type: TextField.Type.Warning
             placeholderText: "Warning!!!"
         }
     }

@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
-import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
 Pane {
@@ -16,18 +15,18 @@ Pane {
     ColumnLayout {
         width: parent.width
 
-        StatusRadioButton {
+        RadioButton {
+            text: "Unchecked radio"
+        }
+        RadioButton {
             checked: true
             text: "Checked radio"
         }
-        StatusRadioButton {
-            text: "Unchecked radio"
-        }
-        StatusRadioButton {
+        RadioButton {
             enabled: false
             text: "Unchecked radio/disabled"
         }
-        StatusRadioButton {
+        RadioButton {
             enabled: false
             checked: true
             text: "Checked radio/disabled"

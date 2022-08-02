@@ -1,10 +1,18 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Templates 2.15 as T
 
 import StatusQ.Core.Theme 1.0
 
-Switch {
+T.Switch {
     id: root
+
+    implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                            implicitContentWidth + horizontalPadding)
+    implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
+                             implicitContentHeight + verticalPadding,
+                             implicitIndicatorHeight + verticalPadding)
+
     padding: 2
     spacing: 4
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
@@ -30,7 +38,7 @@ Switch {
         }
     }
 
-    contentItem: StatusLabel {
+    contentItem: Label {
         text: root.text
         font: root.font
         leftPadding: root.mirrored ? 0 : root.indicator.width + root.spacing

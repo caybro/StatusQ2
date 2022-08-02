@@ -1,6 +1,0 @@
-module StatusQ.Components
-StatusLabel 1.0 StatusLabel.qml
-StatusSwitch 1.0 StatusSwitch.qml
-StatusCheckBox 1.0 StatusCheckBox.qml
-StatusRadioButton 1.0 StatusRadioButton.qml
-StatusTextField 1.0 StatusTextField.qml

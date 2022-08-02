@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
   app.setApplicationVersion(QStringLiteral("0.1"));
 
   qputenv("QT_QUICK_CONTROLS_HOVER_ENABLED", QByteArrayLiteral("1"));
+  qputenv("QT_QUICK_CONTROLS_STYLE", QByteArrayLiteral("StatusqTheme"));
 
   QQmlApplicationEngine engine;
   engine.addImportPath(app.applicationDirPath() + QStringLiteral("/../imports/"));

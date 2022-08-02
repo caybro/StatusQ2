@@ -6,7 +6,6 @@ import QtQuick.Window 2.15
 import Qt.labs.settings 1.0
 import Qt.labs.folderlistmodel 2.15
 
-import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
 ApplicationWindow {
@@ -47,7 +46,7 @@ ApplicationWindow {
             anchors.fill: parent
             RowLayout {
                 Layout.alignment: Qt.AlignLeft
-                StatusSwitch {
+                Switch {
                     id: themeSwitch
                     checked: Theme.type === Palette.Type.Dark
                     text: checked ? "Dark" : "Light"
@@ -55,12 +54,12 @@ ApplicationWindow {
                     ToolTip.text: "Current theme: %1".arg(Theme.palette.name)
                     ToolTip.visible: themeSwitch.hovered
                 }
-                StatusLabel {
+                Label {
                     enabled: false
                     text: "(bg color: %1)".arg(Theme.palette.backgroundColor)
                 }
             }
-            StatusLabel {
+            Label {
                 anchors.centerIn: parent
                 font.bold: true
                 text: folderModel.get(pagesListView.currentIndex, "fileBaseName") ?? ""
@@ -116,7 +115,7 @@ ApplicationWindow {
             color: Theme.palette.backgroundColor
             Behavior on color { ColorAnimation { duration: 50 } }
         }
-        initialItem: StatusLabel {
+        initialItem: Label {
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 32
             font.weight: Font.DemiBold

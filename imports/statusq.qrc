@@ -1,13 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>StatusQ/Components/qmldir</file>
-        <file>StatusQ/Components/StatusLabel.qml</file>
-        <file>StatusQ/Components/StatusSwitch.qml</file>
         <file>StatusQ/qmldir</file>
-        <file>StatusQ/Components/StatusCheckBox.qml</file>
         <file>assets/icons/Checkmark.svg</file>
         <file>assets/icons/Indeterminate.svg</file>
-        <file>StatusQ/Components/StatusRadioButton.qml</file>
         <file>assets/fonts/Inter/Inter-Black.otf</file>
         <file>assets/fonts/Inter/Inter-BlackItalic.otf</file>
         <file>assets/fonts/Inter/Inter-Bold.otf</file>
@@ -27,6 +22,12 @@
         <file>assets/fonts/Inter/Inter-Thin.otf</file>
         <file>assets/fonts/Inter/Inter-ThinItalic.otf</file>
         <file>assets/fonts/Inter/Inter-V.otf</file>
-        <file>StatusQ/Components/StatusTextField.qml</file>
+        <file>StatusqTheme/Label.qml</file>
+        <file>StatusqTheme/ItemDelegate.qml</file>
+        <file>StatusqTheme/Control.qml</file>
+        <file>StatusqTheme/CheckBox.qml</file>
+        <file>StatusqTheme/RadioButton.qml</file>
+        <file>StatusqTheme/Switch.qml</file>
+        <file>StatusqTheme/TextField.qml</file>
     </qresource>
 </RCC>

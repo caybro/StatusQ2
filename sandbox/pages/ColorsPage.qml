@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
-import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
 Pane {
@@ -20,7 +19,7 @@ Pane {
         Layout.preferredWidth: childrenRect.width
         Layout.preferredHeight: childrenRect.height
 
-        StatusLabel {
+        Label {
             id: label
             padding: 8
             anchors.centerIn: parent
@@ -32,7 +31,7 @@ Pane {
         id: row
         property string text
         property var color
-        StatusLabel {
+        Label {
             Layout.preferredWidth: 100
             text: parent.text
         }
@@ -43,7 +42,7 @@ Pane {
                 Layout.preferredWidth: 100
                 Layout.preferredHeight: childrenRect.height
                 color: row.color(modelData)
-                StatusLabel {
+                Label {
                     padding: 8
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData).arg(parent.color)

@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
-import StatusQ.Components 1.0
 import StatusQ.Core.Theme 1.0
 
 Pane {
@@ -16,29 +15,31 @@ Pane {
     ColumnLayout {
         width: parent.width
 
-        StatusCheckBox {
+        CheckBox {
             //Layout.preferredHeight: 70
             text: "Unchecked"
         }
-        StatusCheckBox {
+        CheckBox {
             tristate: true
+            checkState: Qt.PartiallyChecked
             text: "Tristate"
         }
-        StatusCheckBox {
+        CheckBox {
             checked: true
             text: "Checked"
         }
 
-        StatusCheckBox {
+        CheckBox {
             enabled: false
             text: "Unchecked/disabled"
         }
-        StatusCheckBox {
+        CheckBox {
             enabled: false
             tristate: true
+            checkState: Qt.PartiallyChecked
             text: "Tristate/disabled"
         }
-        StatusCheckBox {
+        CheckBox {
             enabled: false
             checked: true
             text: "Checked/disabled"
