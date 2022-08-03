@@ -36,11 +36,7 @@ ApplicationWindow {
 
     header: ToolBar {
         id: toolbar
-        leftPadding: 8
-        background: Rectangle {
-            color: Theme.palette.baseColor
-            Behavior on color { ColorAnimation { duration: 50 } }
-        }
+        rightPadding: 0
 
         RowLayout {
             anchors.fill: parent

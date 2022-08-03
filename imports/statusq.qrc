@@ -30,5 +30,7 @@
         <file>StatusqTheme/Switch.qml</file>
         <file>StatusqTheme/TextField.qml</file>
         <file>StatusqTheme/AbstractButton.qml</file>
+        <file>StatusqTheme/Pane.qml</file>
+        <file>StatusqTheme/ToolBar.qml</file>
     </qresource>
 </RCC>

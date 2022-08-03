@@ -6,6 +6,7 @@ import StatusQ.Core.Theme 1.0
 
 T.TextField {
     id: root
+
     implicitWidth: implicitBackgroundWidth + leftInset + rightInset
                    || Math.max(contentWidth, placeholder.implicitWidth) + leftPadding + rightPadding
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
