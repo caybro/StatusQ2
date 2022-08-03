@@ -32,7 +32,7 @@ T.CheckBox {
             anchors.centerIn: parent
             sourceSize: Qt.size(8,6)
             source: "qrc:/assets/icons/Checkmark.svg"
-            visible: root.checked
+            visible: root.checkState === Qt.Checked
             color: Theme.palette.backgroundColor
         }
 

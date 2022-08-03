@@ -25,8 +25,8 @@ T.RadioButton {
         Behavior on color { ColorAnimation { duration: 50 } }
 
         Rectangle {
-            width: parent.width/4
-            height: width
+            width: height
+            height: (parent.height/4).toFixed(0) // try hard to keep it in the real center, avoid rounding errors
             radius: width/2
             anchors.centerIn: parent
             color: Theme.palette.backgroundColor
