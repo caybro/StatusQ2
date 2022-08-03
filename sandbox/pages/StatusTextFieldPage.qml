@@ -18,11 +18,15 @@ Pane {
         }
         TextField {
             type: TextField.Type.Success
-            placeholderText: "Success!!!"
+            placeholderText: "Success :)"
         }
         TextField {
             type: TextField.Type.Warning
-            placeholderText: "Warning!!!"
+            placeholderText: "Warning!"
+        }
+        TextField {
+            type: TextField.Type.Danger
+            placeholderText: "Danger!!!"
         }
     }
 }
