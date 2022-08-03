@@ -12,7 +12,7 @@ T.Pane {
     padding: 8
 
     background: Rectangle {
-        color: Theme.palette.baseColor
+        color: Theme.palette.backgroundColor
         Behavior on color { ColorAnimation { duration: 50 } }
     }
 }

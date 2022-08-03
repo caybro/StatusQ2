@@ -7,11 +7,6 @@ import StatusQ.Core.Theme 1.0
 Pane {
     id: root
 
-    background: Rectangle {
-        color: Theme.palette.backgroundColor
-        Behavior on color { ColorAnimation { duration: 50 } }
-    }
-
     ColumnLayout {
         width: parent.width
         TextField {
