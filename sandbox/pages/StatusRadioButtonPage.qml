@@ -11,11 +11,16 @@ Pane {
         width: parent.width
 
         RadioButton {
+        }
+        RadioButton {
             text: "Unchecked radio"
         }
         RadioButton {
             checked: true
             text: "Checked radio"
+        }
+        RadioButton {
+            enabled: false
         }
         RadioButton {
             enabled: false

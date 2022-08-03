@@ -10,6 +10,8 @@ Pane {
     ColumnLayout {
         width: parent.width
 
+        CheckBox {}
+
         CheckBox {
             //Layout.preferredHeight: 35
             text: "Unchecked"
@@ -24,6 +26,10 @@ Pane {
             text: "Checked"
         }
 
+
+        CheckBox {
+            enabled: false
+        }
         CheckBox {
             enabled: false
             text: "Unchecked/disabled"
