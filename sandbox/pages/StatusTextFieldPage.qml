@@ -10,7 +10,10 @@ Pane {
     ColumnLayout {
         width: parent.width
         TextField {
-            placeholderText: "Edit me"
+            placeholderText: "Edit me placeholder"
+        }
+        TextField {
+            text: "This is actual text"
         }
         TextField {
             enabled: false
