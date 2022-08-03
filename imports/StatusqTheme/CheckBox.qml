@@ -30,8 +30,8 @@ T.CheckBox {
         // FIXME make a StatusIcon component out of ColorImage ;)
         ColorImage {
             anchors.centerIn: parent
-            sourceSize: Qt.size(8,6)
-            source: "qrc:/assets/icons/Checkmark.svg"
+            sourceSize: Qt.size(16,16)
+            source: "qrc:/assets/icons/small/Checkmark.svg"
             visible: root.checkState === Qt.Checked
             color: Theme.palette.backgroundColor
         }
@@ -39,7 +39,7 @@ T.CheckBox {
         ColorImage {
             anchors.centerIn: parent
             sourceSize: Qt.size(8,2)
-            source: "qrc:/assets/icons/Indeterminate.svg"
+            source: "qrc:/assets/icons/small/Indeterminate.svg"
             visible: root.checkState === Qt.PartiallyChecked
             color: Theme.palette.backgroundColor
         }

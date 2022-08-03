@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>StatusQ/qmldir</file>
-        <file>assets/icons/Checkmark.svg</file>
-        <file>assets/icons/Indeterminate.svg</file>
         <file>assets/fonts/Inter/Inter-Black.otf</file>
         <file>assets/fonts/Inter/Inter-BlackItalic.otf</file>
         <file>assets/fonts/Inter/Inter-Bold.otf</file>
@@ -32,5 +30,9 @@
         <file>StatusqTheme/AbstractButton.qml</file>
         <file>StatusqTheme/Pane.qml</file>
         <file>StatusqTheme/ToolBar.qml</file>
+        <file>assets/icons/Close.svg</file>
+        <file>assets/icons/small/Checkmark.svg</file>
+        <file>assets/icons/small/Close.svg</file>
+        <file>assets/icons/small/Indeterminate.svg</file>
     </qresource>
 </RCC>
