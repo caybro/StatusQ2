@@ -34,5 +34,7 @@
         <file>assets/icons/small/Checkmark.svg</file>
         <file>assets/icons/small/Close.svg</file>
         <file>assets/icons/small/Indeterminate.svg</file>
+        <file>StatusQ/Core/qmldir</file>
+        <file>StatusQ/Core/StatusIcon.qml</file>
     </qresource>
 </RCC>

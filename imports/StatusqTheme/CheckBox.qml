@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls.impl 2.15 // for ColorImage
 import QtQuick.Templates 2.15 as T
 
+import StatusQ.Core 1.0
 import StatusQ.Core.Theme 1.0
 
 T.CheckBox {
@@ -27,19 +28,20 @@ T.CheckBox {
                                                 : Theme.palette.primaryColor()
         Behavior on color { ColorAnimation { duration: 50 } }
 
-        // FIXME make a StatusIcon component out of ColorImage ;)
-        ColorImage {
+        StatusIcon {
             anchors.centerIn: parent
-            sourceSize: Qt.size(16,16)
-            source: "qrc:/assets/icons/small/Checkmark.svg"
+            small: true
+            icon: "Checkmark"
             visible: root.checkState === Qt.Checked
             color: Theme.palette.backgroundColor
         }
 
-        ColorImage {
+        StatusIcon {
             anchors.centerIn: parent
-            sourceSize: Qt.size(8,2)
-            source: "qrc:/assets/icons/small/Indeterminate.svg"
+            width: 8
+            height: 2
+            small: true
+            icon: "Indeterminate"
             visible: root.checkState === Qt.PartiallyChecked
             color: Theme.palette.backgroundColor
         }
