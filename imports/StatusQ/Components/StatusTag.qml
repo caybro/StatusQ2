@@ -40,7 +40,6 @@ Button {
     spacing: 4
     horizontalPadding: size === StatusTag.Size.TwentyFourPx ? 12 : 16
     verticalPadding: 0
-    icon.color: Theme.palette.textColor
     // end T.Button
 
     implicitHeight: size === StatusTag.Size.TwentyFourPx ? 24 : 32
@@ -48,13 +47,33 @@ Button {
     font.weight: Font.Medium
     font.pixelSize: size === StatusTag.Size.TwentyFourPx ? 11 : 13
 
+    icon.color: d.baseColor
+
     indicator: null
+
+    QtObject {
+        id: d
+        readonly property color baseColor: {
+            switch (root.type) {
+            case StatusTag.Type.Primary:
+                return Theme.palette.primaryColor()
+            case StatusTag.Type.Success:
+                return Theme.palette.successColor()
+            case StatusTag.Type.Warning:
+                return Theme.palette.warningColor()
+            case StatusTag.Type.Error:
+                return Theme.palette.dangerColor()
+            default:
+                return Theme.palette.textColor
+            }
+        }
+    }
 
     background: Rectangle {
         radius: 20
-        color: Theme.palette.secondaryBaseColor // TODO more Type
+        color: Theme.palette.alphaColor(d.baseColor, 0.05)
         border.width: 1
-        border.color: Theme.palette.baseColor // TODO more Type
+        border.color: Theme.palette.alphaColor(d.baseColor, 0.1)
     }
 
     contentItem: RowLayout {
@@ -72,13 +91,14 @@ Button {
             visible: text
             text: root.prefix
             font: root.font
-            color: Theme.palette.secondaryTextColor
+            color: Theme.palette.alphaColor(d.baseColor, 0.4)
         }
         Label {
             Layout.preferredWidth: visible ? width : 0
             visible: text
             text: root.label
             font: root.font
+            color: d.baseColor
         }
         // TODO rightTokens
         StatusIcon {

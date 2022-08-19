@@ -63,11 +63,16 @@ class Palette : public QObject
   virtual QString name() const = 0;
   virtual Palette::Type type() const = 0;
 
-  // common colors
+  // common color methods
   Q_INVOKABLE QColor neutralColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const;
   Q_INVOKABLE inline constexpr QColor white(float alpha = 1.f) const
   {
     return {255, 255, 255, static_cast<int>(alpha * 255)};
+  }
+  Q_INVOKABLE inline QColor alphaColor(const QColor& base, float alpha = 1.f) const {
+    QColor color(base);
+    color.setAlphaF(alpha);
+    return color;
   }
 
   // theme specific colors, to be implemented in light/dark palettes
