@@ -36,5 +36,7 @@
         <file>assets/icons/small/Indeterminate.svg</file>
         <file>StatusQ/Core/qmldir</file>
         <file>StatusQ/Core/StatusIcon.qml</file>
+        <file>StatusQ/Components/qmldir</file>
+        <file>StatusQ/Components/StatusTag.qml</file>
     </qresource>
 </RCC>

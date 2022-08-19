@@ -7,5 +7,6 @@
         <file>pages/StatusRadioButtonPage.qml</file>
         <file>pages/StatusSwitchPage.qml</file>
         <file>pages/StatusTextFieldPage.qml</file>
+        <file>pages/StatusTagPage.qml</file>
     </qresource>
 </RCC>

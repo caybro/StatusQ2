@@ -1,0 +1,3 @@
+module StatusQ.Components
+
+StatusTag 1.0 StatusTag.qml
