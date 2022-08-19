@@ -12,4 +12,8 @@ T.AbstractButton {
     padding: 2
     spacing: 4
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
+
+    HoverHandler {
+        cursorShape: parent.hovered ? Qt.PointingHandCursor : undefined
+    }
 }

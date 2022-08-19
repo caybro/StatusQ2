@@ -32,4 +32,8 @@ T.ItemDelegate {
         visible: root.down || root.highlighted || root.visualFocus
         color: Theme.palette.baseColor
     }
+
+    HoverHandler {
+        cursorShape: parent.hovered ? Qt.PointingHandCursor : undefined
+    }
 }

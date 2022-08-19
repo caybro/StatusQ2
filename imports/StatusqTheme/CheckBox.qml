@@ -53,4 +53,8 @@ T.CheckBox {
         leftPadding: root.mirrored ? 0 : root.indicator.width + root.spacing
         rightPadding: root.mirrored ? root.indicator.width + root.spacing : 0
     }
+
+    HoverHandler {
+        cursorShape: parent.hovered ? Qt.PointingHandCursor : undefined
+    }
 }
