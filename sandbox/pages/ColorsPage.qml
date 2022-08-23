@@ -42,6 +42,7 @@ Pane {
                     padding: 8
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData).arg(parent.color)
+                    font.bold: modelData === Palette.Shade50
                     color: modelData < Palette.Shade50 ? Theme.palette.neutralColor(Palette.Shade90)
                                                        : Theme.palette.white()
                 }
@@ -85,6 +86,8 @@ Pane {
 
         ColorRow {
             text: "Primary:"
+            model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
+                Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
             color: (shade) => Theme.palette.primaryColor(shade)
         }
 

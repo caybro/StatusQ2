@@ -4,12 +4,18 @@
 
 namespace {
 constexpr QColor kPrimaryDefaultColor{82, 112, 247}; // #5270F7
-constexpr std::array<Palette::ColorPair, 4> kPrimaryColors{{
+constexpr std::array<Palette::ColorPair, 11> kPrimaryColors{{
     {Palette::Shade95, {43, 67, 172}}, // #2B43AC
     {Palette::Shade90, {47, 73, 187}}, // #2F49BB
+    {Palette::Shade80, {51, 77, 202}}, // #334DCA
+    {Palette::Shade70, {54, 83, 217}}, // #3653D9
     {Palette::Shade60, {58, 89, 232}}, // #3A59E8
     {Palette::Shade50, kPrimaryDefaultColor},
-    // TODO
+    {Palette::Shade40, {113, 137, 248}}, // #7189F8
+    {Palette::Shade30, {144, 163, 249}}, // #90A3F9
+    {Palette::Shade20, {175, 189, 251}}, // #AFBDFB
+    {Palette::Shade10, {206, 214, 252}}, // #CED6FC
+    {Palette::Shade5, {237, 240, 254}} // #EDF0FE
 }};
 
 constexpr QColor kSuccessDefaultColor{0, 140, 115}; // #008C73
