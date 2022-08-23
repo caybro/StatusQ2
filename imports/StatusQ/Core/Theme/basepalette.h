@@ -21,6 +21,7 @@ class Palette : public QObject
   Q_PROPERTY(QColor secondaryBaseColor READ secondaryBaseColor CONSTANT)
   Q_PROPERTY(QColor textColor READ textColor CONSTANT)
   Q_PROPERTY(QColor secondaryTextColor READ secondaryTextColor CONSTANT)
+  Q_PROPERTY(QVariantMap customizationColors READ customizationColors CONSTANT)
 
   Q_PROPERTY(float disabledOpacity READ disabledOpacity CONSTANT)
   Q_PROPERTY(float secondaryDisabledOpacity READ secondaryDisabledOpacity CONSTANT)
@@ -107,6 +108,7 @@ class Palette : public QObject
   virtual QColor secondaryBaseColor() const = 0;
   virtual QColor textColor() const = 0;
   virtual QColor secondaryTextColor() const = 0;
+  virtual QVariantMap customizationColors() const = 0;
 
  private:
   // general color properties

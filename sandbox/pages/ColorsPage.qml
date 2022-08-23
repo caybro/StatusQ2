@@ -50,6 +50,27 @@ Pane {
         }
     }
 
+    component CustomizationRow: RowLayout {
+        Label {
+            Layout.preferredWidth: 100
+            text: "Customization:"
+        }
+        Repeater {
+            model: Object.keys(Theme.palette.customizationColors)
+            delegate: Rectangle {
+                Layout.preferredWidth: childrenRect.width
+                Layout.preferredHeight: childrenRect.height
+                color: Theme.palette.customizationColors[modelData]
+                Label {
+                    padding: 8
+                    anchors.centerIn: parent
+                    text: "%1: %2".arg(modelData).arg(parent.color)
+                    color: Theme.palette.white() // TODO contrasting color
+                }
+            }
+        }
+    }
+
     ColumnLayout {
         width: parent.width
 
@@ -110,5 +131,7 @@ Pane {
             text: "Danger:"
             color: (shade) => Theme.palette.dangerColor(shade)
         }
+
+        CustomizationRow {}
     }
 }

@@ -116,5 +116,21 @@ QColor DarkPalette::warningColor(Shade shade, float alpha) const
 
 QColor DarkPalette::dangerColor(Shade shade, float alpha) const
 {
-  return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
+    return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
+}
+
+QVariantMap DarkPalette::customizationColors() const
+{
+    return {
+        {QStringLiteral("blue"), QLatin1String("#AAC6FF")},
+        {QStringLiteral("purple"), QLatin1String("#887AF9")},
+        {QStringLiteral("cyan"), QLatin1String("#51D0F0")},
+        {QStringLiteral("violet"), QLatin1String("#D37EF4")},
+        {QStringLiteral("grep"), QLatin1String("#FA6565")},
+        {QStringLiteral("yellow"), QLatin1String("#FFCA0F")},
+        {QStringLiteral("grass"), QLatin1String("#93DB33")},
+        {QStringLiteral("moss"), QLatin1String("#10A88E")},
+        {QStringLiteral("vintage"), QLatin1String("#AD4343")},
+        {QStringLiteral("khaki"), QLatin1String("#EAD27B")},
+    };
 }
