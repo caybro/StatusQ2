@@ -26,12 +26,13 @@ Pane {
         id: row
         property string text
         property var color
+        property var model: [Palette.Shade95, Palette.Shade90, Palette.Shade60, Palette.Shade50]
         Label {
             Layout.preferredWidth: 100
             text: parent.text
         }
         Repeater {
-            model: [Palette.Shade95, Palette.Shade90, Palette.Shade60, Palette.Shade50]
+            model: parent.model
             delegate: Rectangle {
                 id: rect
                 Layout.preferredWidth: 100
@@ -41,7 +42,8 @@ Pane {
                     padding: 8
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData).arg(parent.color)
-                    color: Theme.palette.white() // FIXME contrast color
+                    color: modelData < Palette.Shade50 ? Theme.palette.neutralColor(Palette.Shade90)
+                                                       : Theme.palette.white()
                 }
             }
         }
@@ -76,6 +78,8 @@ Pane {
 
         ColorRow {
             text: "Neutral:"
+            model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
+                Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
             color: function(shade) { return Theme.palette.neutralColor(shade); }
         }
 
