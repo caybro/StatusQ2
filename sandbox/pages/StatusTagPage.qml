@@ -8,65 +8,84 @@ import StatusQ.Core.Theme 1.0
 Pane {
     id: root
 
-    ColumnLayout {
+    GridLayout {
+        columns: 5
         width: parent.width
 
-        StatusTag {
-            size: StatusTag.Size.TwentyFourPx
-            prefix: "Prefix"
-            text: "Label"
-            removable: true
-        }
+        Repeater {
+            model: [StatusTag.Type.Normal, StatusTag.Type.Primary, StatusTag.Type.Success, StatusTag.Type.Warning,
+                StatusTag.Type.Error]
+            ColumnLayout {
+                width: parent.width
 
-        StatusTag {
-            icon.name: "Close"
-            icon.color: "green"
-            prefix: "Prefix"
-            text: "Label"
-            removable: true
-        }
+                StatusTag {
+                    size: StatusTag.Size.TwentyFourPx
+                    prefix: "Prefix"
+                    text: "Label"
+                    removable: true
+                    type: modelData
+                }
 
-        StatusTag {
-            enabled: false
-            size: StatusTag.Size.TwentyFourPx
-            prefix: "Prefix"
-            text: "Label"
-            removable: true
-        }
+                StatusTag {
+                    icon.name: "Close"
+                    icon.color: "green"
+                    prefix: "Prefix"
+                    text: "Green icon"
+                    removable: true
+                    type: modelData
+                }
 
-        StatusTag {
-            prefix: "Prefix"
-            text: "Label"
-            removable: true
-        }
+                StatusTag {
+                    enabled: false
+                    size: StatusTag.Size.TwentyFourPx
+                    prefix: "Prefix"
+                    text: "Label"
+                    removable: true
+                    type: modelData
+                }
 
-        StatusTag {
-            size: StatusTag.Size.TwentyFourPx
-            prefix: "Prefix"
-            text: "Label"
-        }
+                StatusTag {
+                    prefix: "Prefix"
+                    text: "Label"
+                    removable: true
+                    type: modelData
+                }
 
-        StatusTag {
-            prefix: "Prefix"
-            text: "Label"
-        }
+                StatusTag {
+                    size: StatusTag.Size.TwentyFourPx
+                    prefix: "Prefix"
+                    text: "Label"
+                    type: modelData
+                }
 
-        StatusTag {
-            size: StatusTag.Size.TwentyFourPx
-            prefix: "Prefix"
-        }
+                StatusTag {
+                    prefix: "Prefix"
+                    text: "Label"
+                    type: modelData
+                }
 
-        StatusTag {
-            prefix: "Prefix"
-        }
+                StatusTag {
+                    size: StatusTag.Size.TwentyFourPx
+                    prefix: "Prefix"
+                    type: modelData
+                }
 
-        StatusTag {
-            size: StatusTag.Size.TwentyFourPx
-            text: "Label"
-        }
+                StatusTag {
+                    prefix: "Prefix"
+                    type: modelData
+                }
 
-        StatusTag {
-            text: "Label"
+                StatusTag {
+                    size: StatusTag.Size.TwentyFourPx
+                    text: "Label"
+                    type: modelData
+                }
+
+                StatusTag {
+                    text: "Label"
+                    type: modelData
+                }
+            }
         }
     }
 }
