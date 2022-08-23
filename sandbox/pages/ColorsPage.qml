@@ -80,32 +80,32 @@ Pane {
             text: "Neutral:"
             model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
                 Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
-            color: function(shade) { return Theme.palette.neutralColor(shade); }
+            color: (shade) => Theme.palette.neutralColor(shade)
         }
 
         ColorRow {
             text: "Primary:"
-            color: function(shade) { return Theme.palette.primaryColor(shade); }
+            color: (shade) => Theme.palette.primaryColor(shade)
         }
 
         ColorRow {
             text: "Success:"
-            color: function(shade) { return Theme.palette.successColor(shade); }
+            color: (shade) => Theme.palette.successColor(shade)
         }
 
         ColorRow {
             text: "Info:"
-            color: function(shade) { return Theme.palette.infoColor(shade); }
+            color: (shade) => Theme.palette.infoColor(shade)
         }
 
         ColorRow {
             text: "Warning:"
-            color: function(shade) { return Theme.palette.warningColor(shade); }
+            color: (shade) => Theme.palette.warningColor(shade)
         }
 
         ColorRow {
             text: "Danger:"
-            color: function(shade) { return Theme.palette.dangerColor(shade); }
+            color: (shade) => Theme.palette.dangerColor(shade)
         }
     }
 }
