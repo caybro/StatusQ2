@@ -67,11 +67,11 @@ class Palette : public QObject
   Q_INVOKABLE QColor neutralColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const;
   Q_INVOKABLE inline constexpr QColor white(float alpha = 1.f) const
   {
-    return {255, 255, 255, static_cast<int>(alpha * 255)};
+    return {255, 255, 255, qBound(0, static_cast<int>(alpha * 255), 255)};
   }
   Q_INVOKABLE inline QColor alphaColor(const QColor& base, float alpha = 1.f) const {
     QColor color(base);
-    color.setAlphaF(alpha);
+    color.setAlphaF(qBound(0.f, alpha, 1.f));
     return color;
   }
 
@@ -97,7 +97,7 @@ class Palette : public QObject
     }
 
     QColor color(colorIt->second);
-    color.setAlphaF(alpha);
+    color.setAlphaF(qBound(0.f, alpha, 1.f));
     return color;
   };
 
