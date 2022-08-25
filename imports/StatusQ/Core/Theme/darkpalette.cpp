@@ -34,30 +34,48 @@ constexpr std::array<Palette::ColorPair, 11> kSuccessColors{{
 }};
 
 constexpr QColor kInfoDefaultColor{13, 136, 158}; // #0D889E
-constexpr std::array<Palette::ColorPair, 4> kInfoColors{{
+constexpr std::array<Palette::ColorPair, 11> kInfoColors{{
   {Palette::Shade95, {0, 94, 110}},  // #005E6E
   {Palette::Shade90, {0, 102, 120}}, // #006678
+  {Palette::Shade80, rgba(0, 109, 129, 1)},
+  {Palette::Shade70, rgba(0, 117, 139, 1)},
   {Palette::Shade60, {0, 125, 148}}, // #007D94
   {Palette::Shade50, kInfoDefaultColor},
-  // TODO
+  {Palette::Shade40, rgba(56, 157, 175, 1)},
+  {Palette::Shade30, rgba(100, 178, 192, 1)},
+  {Palette::Shade20, rgba(143, 200, 210, 1)},
+  {Palette::Shade10, rgba(187, 221, 227, 1)},
+  {Palette::Shade5, rgba(230, 243, 245, 1)}
 }};
 
 constexpr QColor kWarningDefaultColor{240, 95, 29}; // #F05F1D
-constexpr std::array<Palette::ColorPair, 4> kWarningColors{{
+constexpr std::array<Palette::ColorPair, 11> kWarningColors{{
   {Palette::Shade95, {168, 57, 7}}, // #A83907
   {Palette::Shade90, {182, 62, 7}}, // #B63E07
+  {Palette::Shade80, rgba(196, 67, 8, 1)},
+  {Palette::Shade70, rgba(211, 72, 8, 1)},
   {Palette::Shade60, {225, 77, 9}}, // #E14D09
   {Palette::Shade50, kWarningDefaultColor},
-  // TODO
+  {Palette::Shade40, rgba(242, 123, 69, 1)},
+  {Palette::Shade30, rgba(245, 152, 110, 1)},
+  {Palette::Shade20, rgba(248, 181, 151, 1)},
+  {Palette::Shade10, rgba(250, 210, 191, 1)},
+  {Palette::Shade5, rgba(253, 239, 232, 1)}
 }};
 
 constexpr QColor kDangerDefaultColor{229, 55, 87}; // #E53757
-constexpr std::array<Palette::ColorPair, 4> kDangerColors{{
+constexpr std::array<Palette::ColorPair, 11> kDangerColors{{
   {Palette::Shade95, {160, 26, 50}}, // #A01A32
   {Palette::Shade90, {174, 28, 55}}, // #AE1C37
+  {Palette::Shade80, rgba(187, 30, 59, 1)},
+  {Palette::Shade70, rgba(201, 32, 63, 1)},
   {Palette::Shade60, {215, 34, 67}}, // #D72243
   {Palette::Shade50, kDangerDefaultColor},
-  // TODO
+  {Palette::Shade40, rgba(233, 91, 117, 1)},
+  {Palette::Shade30, rgba(238, 127, 147, 1)},
+  {Palette::Shade20, rgba(243, 163, 177, 1)},
+  {Palette::Shade10, rgba(247, 199, 207, 1)},
+  {Palette::Shade5,  rgba(252, 235, 238, 1)}
 }};
 } // namespace
 

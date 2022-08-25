@@ -26,7 +26,8 @@ Pane {
         id: row
         property string text
         property var color
-        property var model: [Palette.Shade95, Palette.Shade90, Palette.Shade60, Palette.Shade50]
+        property var model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
+            Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
         Label {
             Layout.preferredWidth: 100
             text: parent.text
@@ -127,22 +128,16 @@ Pane {
 
         ColorRow {
             text: "Neutral:"
-            model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
-                Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
             color: (shade) => Theme.palette.neutralColor(shade)
         }
 
         ColorRow {
             text: "Primary:"
-            model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
-                Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
             color: (shade) => Theme.palette.primaryColor(shade)
         }
 
         ColorRow {
             text: "Success:"
-            model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
-                Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
             color: (shade) => Theme.palette.successColor(shade)
         }
 
