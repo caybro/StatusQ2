@@ -77,7 +77,7 @@ class Palette : public QObject
     return color;
   }
   Q_INVOKABLE inline constexpr QColor rgba(int r, int g, int b, float alpha = 1.f) const {
-      return {r, g, b, qBound(0, static_cast<int>(alpha * 255), 255)};
+    return {r, g, b, qBound(0, static_cast<int>(alpha * 255), 255)};
   }
 
   // theme specific colors, to be implemented in light/dark palettes

@@ -5,58 +5,58 @@
 namespace {
 constexpr QColor kPrimaryDefaultColor{67, 96, 223}; // #4360DF
 constexpr std::array<Palette::ColorPair, 11> kPrimaryColors{{
-    {Palette::Shade95, {33, 56, 156}}, // #21389C
-    {Palette::Shade90, {37, 62, 169}}, // #253EA9
-    {Palette::Shade80, {40, 67, 182}}, // #2843B6
-    {Palette::Shade70, {43, 72, 196}}, // #2B48C4
-    {Palette::Shade60, {46, 77, 209}}, // #2E4DD1
-    {Palette::Shade50, kPrimaryDefaultColor},
-    {Palette::Shade40, {100, 124, 228}}, // #647CE4
-    {Palette::Shade30, {134, 153, 234}}, // #8699EA
-    {Palette::Shade20, {168, 181, 240}}, // #A8B5F0
-    {Palette::Shade10, {202, 210, 246}}, // #CAD2F6
-    {Palette::Shade5, {236, 239, 251}} // #ECEFFB
+  {Palette::Shade95, {33, 56, 156}}, // #21389C
+  {Palette::Shade90, {37, 62, 169}}, // #253EA9
+  {Palette::Shade80, {40, 67, 182}}, // #2843B6
+  {Palette::Shade70, {43, 72, 196}}, // #2B48C4
+  {Palette::Shade60, {46, 77, 209}}, // #2E4DD1
+  {Palette::Shade50, kPrimaryDefaultColor},
+  {Palette::Shade40, {100, 124, 228}}, // #647CE4
+  {Palette::Shade30, {134, 153, 234}}, // #8699EA
+  {Palette::Shade20, {168, 181, 240}}, // #A8B5F0
+  {Palette::Shade10, {202, 210, 246}}, // #CAD2F6
+  {Palette::Shade5, {236, 239, 251}} // #ECEFFB
 }};
 
 constexpr QColor kSuccessDefaultColor{8, 133, 110}; // #08856E
 constexpr std::array<Palette::ColorPair, 4> kSuccessColors{{
-    {Palette::Shade95, {0, 93, 76}},   // #005D4C
-    {Palette::Shade90, {0, 101, 82}},  // #006552
-    {Palette::Shade60, {0, 125, 102}}, // #007D66
-    {Palette::Shade50, kSuccessDefaultColor},
-    // TODO
+  {Palette::Shade95, {0, 93, 76}},   // #005D4C
+  {Palette::Shade90, {0, 101, 82}},  // #006552
+  {Palette::Shade60, {0, 125, 102}}, // #007D66
+  {Palette::Shade50, kSuccessDefaultColor},
+  // TODO
 }};
 
 constexpr QColor kInfoDefaultColor{11, 156, 181}; // #0B9CB5
 constexpr std::array<Palette::ColorPair, 4> kInfoColors{{
-    {Palette::Shade95, {0, 108, 126}}, // #006C7E
-    {Palette::Shade90, {0, 117, 137}}, // #007589
-    {Palette::Shade60, {0, 144, 170}}, // #0090AA
-    {Palette::Shade50, kInfoDefaultColor},
-    // TODO
+  {Palette::Shade95, {0, 108, 126}}, // #006C7E
+  {Palette::Shade90, {0, 117, 137}}, // #007589
+  {Palette::Shade60, {0, 144, 170}}, // #0090AA
+  {Palette::Shade50, kInfoDefaultColor},
+  // TODO
 }};
 
 constexpr QColor kWarningDefaultColor{229, 98, 37}; // #E56225
 constexpr std::array<Palette::ColorPair, 4> kWarningColors{{
-    {Palette::Shade95, {160, 60, 13}}, // #A03C0D
-    {Palette::Shade90, {174, 64, 14}}, // #AE400E
-    {Palette::Shade60, {215, 81, 17}}, // #D75111
-    {Palette::Shade50, kWarningDefaultColor},
-    // TODO
+  {Palette::Shade95, {160, 60, 13}}, // #A03C0D
+  {Palette::Shade90, {174, 64, 14}}, // #AE400E
+  {Palette::Shade60, {215, 81, 17}}, // #D75111
+  {Palette::Shade50, kWarningDefaultColor},
+  // TODO
 }};
 
 constexpr QColor kDangerDefaultColor{217, 35, 68}; // #D92344
 constexpr std::array<Palette::ColorPair, 4> kDangerColors{{
-    {Palette::Shade95, {151, 12, 37}}, // #970C25
-    {Palette::Shade90, {164, 13, 40}}, // #A40D28
-    {Palette::Shade60, {203, 16, 50}}, // #CB1032
-    {Palette::Shade50, kDangerDefaultColor},
-    // TODO
+  {Palette::Shade95, {151, 12, 37}}, // #970C25
+  {Palette::Shade90, {164, 13, 40}}, // #A40D28
+  {Palette::Shade60, {203, 16, 50}}, // #CB1032
+  {Palette::Shade50, kDangerDefaultColor},
+  // TODO
 }};
 } // namespace
 
 LightPalette::LightPalette(QObject *parent)
-    : Palette{parent}
+  : Palette{parent}
 {}
 
 QString LightPalette::name() const
