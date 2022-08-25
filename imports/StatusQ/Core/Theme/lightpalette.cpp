@@ -19,12 +19,18 @@ constexpr std::array<Palette::ColorPair, 11> kPrimaryColors{{
 }};
 
 constexpr QColor kSuccessDefaultColor{8, 133, 110}; // #08856E
-constexpr std::array<Palette::ColorPair, 4> kSuccessColors{{
+constexpr std::array<Palette::ColorPair, 11> kSuccessColors{{
   {Palette::Shade95, {0, 93, 76}},   // #005D4C
   {Palette::Shade90, {0, 101, 82}},  // #006552
+  {Palette::Shade80, rgba(0, 109, 89, 1)},
+  {Palette::Shade70, rgba(0, 117, 95, 1)},
   {Palette::Shade60, {0, 125, 102}}, // #007D66
   {Palette::Shade50, kSuccessDefaultColor},
-  // TODO
+  {Palette::Shade40, rgba(52, 154, 136, 1)},
+  {Palette::Shade30, rgba(96, 176, 162, 1)},
+  {Palette::Shade20, rgba(141, 198, 188, 1)},
+  {Palette::Shade10, rgba(185, 220, 214, 1)},
+  {Palette::Shade5, rgba(230, 242, 240, 1)}
 }};
 
 constexpr QColor kInfoDefaultColor{11, 156, 181}; // #0B9CB5

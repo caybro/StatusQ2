@@ -141,6 +141,8 @@ Pane {
 
         ColorRow {
             text: "Success:"
+            model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
+                Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
             color: (shade) => Theme.palette.successColor(shade)
         }
 
