@@ -116,7 +116,7 @@ QColor DarkPalette::warningColor(Shade shade, float alpha) const
 
 QColor DarkPalette::dangerColor(Shade shade, float alpha) const
 {
-    return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
+  return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
 }
 
 QVariantMap DarkPalette::customizationColors() const

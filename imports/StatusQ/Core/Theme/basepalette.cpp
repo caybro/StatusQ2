@@ -25,5 +25,14 @@ Palette::Palette(QObject *parent)
 
 QColor Palette::neutralColor(Palette::Shade shade, float alpha) const
 {
-  return Palette::getColor(kNeutralSolidColor, kNeutralColors, shade, alpha);
+    return Palette::getColor(kNeutralSolidColor, kNeutralColors, shade, alpha);
+}
+
+QList<QColor> Palette::identiconColors() const
+{
+    return {
+        QColorConstants::Black, QColorConstants::Green, QColorConstants::Yellow,
+        QColorConstants::Red, QColorConstants::Magenta, QColorConstants::Blue,
+        QColorConstants::Cyan, //TODO
+    };
 }

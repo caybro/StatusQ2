@@ -22,6 +22,7 @@ class Palette : public QObject
   Q_PROPERTY(QColor textColor READ textColor CONSTANT)
   Q_PROPERTY(QColor secondaryTextColor READ secondaryTextColor CONSTANT)
   Q_PROPERTY(QVariantMap customizationColors READ customizationColors CONSTANT)
+  Q_PROPERTY(QList<QColor> identiconColors READ identiconColors CONSTANT)
 
   Q_PROPERTY(float disabledOpacity READ disabledOpacity CONSTANT)
   Q_PROPERTY(float secondaryDisabledOpacity READ secondaryDisabledOpacity CONSTANT)
@@ -93,9 +94,8 @@ class Palette : public QObject
     if (colorIt == std::cend(container))
       return defaultColor;
 
-    if (qFuzzyCompare(alpha, 1.f)) {
+    if (qFuzzyCompare(alpha, 1.f))
       return colorIt->second;
-    }
 
     QColor color(colorIt->second);
     color.setAlphaF(qBound(0.f, alpha, 1.f));
@@ -113,6 +113,7 @@ class Palette : public QObject
  private:
   // general color properties
   inline constexpr QColor transparent() const { return QColorConstants::Transparent; }
+  QList<QColor> identiconColors() const;
 
   // general palette-related properties
   inline constexpr float disabledOpacity() const { return 0.5; }

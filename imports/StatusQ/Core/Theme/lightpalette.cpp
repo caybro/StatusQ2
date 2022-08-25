@@ -116,21 +116,22 @@ QColor LightPalette::warningColor(Shade shade, float alpha) const
 
 QColor LightPalette::dangerColor(Shade shade, float alpha) const
 {
-    return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
+  return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
 }
 
 QVariantMap LightPalette::customizationColors() const
 {
-    return {
-        {QStringLiteral("blue"), QLatin1String("#2946C4")},
-        {QStringLiteral("purple"), QLatin1String("#887AF9")},
-        {QStringLiteral("cyan"), QLatin1String("#51D0F0")},
-        {QStringLiteral("violet"), QLatin1String("#D37EF4")},
-        {QStringLiteral("grep"), QLatin1String("#FA6565")},
-        {QStringLiteral("yellow"), QLatin1String("#FFCA0F")},
-        {QStringLiteral("grass"), QLatin1String("#7CDA00")},
-        {QStringLiteral("moss"), QLatin1String("#26A69A")},
-        {QStringLiteral("vintage"), QLatin1String("#8B3131")},
-        {QStringLiteral("khaki"), QLatin1String("#9B832F")},
-    };
+  return {
+    // TODO convert colors to RR,GG,BB triplets
+    {QStringLiteral("blue"), QLatin1String("#2946C4")},
+    {QStringLiteral("purple"), QLatin1String("#887AF9")},
+    {QStringLiteral("cyan"), QLatin1String("#51D0F0")},
+    {QStringLiteral("violet"), QLatin1String("#D37EF4")},
+    {QStringLiteral("grep"), QLatin1String("#FA6565")},
+    {QStringLiteral("yellow"), QLatin1String("#FFCA0F")},
+    {QStringLiteral("grass"), QLatin1String("#7CDA00")},
+    {QStringLiteral("moss"), QLatin1String("#26A69A")},
+    {QStringLiteral("vintage"), QLatin1String("#8B3131")},
+    {QStringLiteral("khaki"), QLatin1String("#9B832F")},
+  };
 }

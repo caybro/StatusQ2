@@ -55,16 +55,43 @@ Pane {
             Layout.preferredWidth: 100
             text: "Customization:"
         }
-        Repeater {
+        ListView {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 34
+            clip: true
+            spacing: 5
+            orientation: ListView.Horizontal
             model: Object.entries(Theme.palette.customizationColors)
             delegate: Rectangle {
-                Layout.preferredWidth: childrenRect.width
-                Layout.preferredHeight: childrenRect.height
+                width: customizationLabel.width
+                height: ListView.view.height
                 color: modelData[1]
                 Label {
+                    id: customizationLabel
                     padding: 8
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData[0]).arg(parent.color)
+                    color: Theme.palette.white() // TODO contrasting color
+                }
+            }
+        }
+    }
+
+    component IdenticonRow: RowLayout {
+        Label {
+            Layout.preferredWidth: 100
+            text: "Identicon:"
+        }
+        Repeater {
+            model: Theme.palette.identiconColors
+            delegate: Rectangle {
+                Layout.preferredWidth: childrenRect.width
+                Layout.preferredHeight: childrenRect.height
+                color: modelData
+                Label {
+                    padding: 8
+                    anchors.centerIn: parent
+                    text: modelData
                     color: Theme.palette.white() // TODO contrasting color
                 }
             }
@@ -133,5 +160,7 @@ Pane {
         }
 
         CustomizationRow {}
+
+        IdenticonRow {}
     }
 }
