@@ -119,18 +119,18 @@ QColor DarkPalette::dangerColor(Shade shade, float alpha) const
   return Palette::getColor(kDangerDefaultColor, kDangerColors, shade, alpha);
 }
 
-  QVariantMap DarkPalette::customizationColors() const
+QVariantMap DarkPalette::customizationColors() const
 {
   return {
-    {QStringLiteral("blue"), QLatin1String("#AAC6FF")},
-    {QStringLiteral("purple"), QLatin1String("#887AF9")},
-    {QStringLiteral("cyan"), QLatin1String("#51D0F0")},
-    {QStringLiteral("violet"), QLatin1String("#D37EF4")},
-    {QStringLiteral("grep"), QLatin1String("#FA6565")},
-    {QStringLiteral("yellow"), QLatin1String("#FFCA0F")},
-    {QStringLiteral("grass"), QLatin1String("#93DB33")},
-    {QStringLiteral("moss"), QLatin1String("#10A88E")},
-    {QStringLiteral("vintage"), QLatin1String("#AD4343")},
-    {QStringLiteral("khaki"), QLatin1String("#EAD27B")},
+    {QStringLiteral("blue"), rgba(170, 198, 255, 1)},
+    {QStringLiteral("purple"), rgba(136, 122, 249, 1)},
+    {QStringLiteral("cyan"), rgba(81, 208, 240, 1)},
+    {QStringLiteral("violet"), rgba(211, 126, 244, 1)},
+    {QStringLiteral("grep"), rgba(250, 101, 101, 1)},
+    {QStringLiteral("yellow"), rgba(255, 202, 15, 1)},
+    {QStringLiteral("grass"), rgba(147, 219, 51, 1)},
+    {QStringLiteral("moss"), rgba(16, 168, 142, 1)},
+    {QStringLiteral("vintage"), rgba(173, 67, 67, 1)},
+    {QStringLiteral("khaki"), rgba(234, 210, 123, 1)},
   };
 }
