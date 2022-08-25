@@ -56,15 +56,15 @@ Pane {
             text: "Customization:"
         }
         Repeater {
-            model: Object.keys(Theme.palette.customizationColors)
+            model: Object.entries(Theme.palette.customizationColors)
             delegate: Rectangle {
                 Layout.preferredWidth: childrenRect.width
                 Layout.preferredHeight: childrenRect.height
-                color: Theme.palette.customizationColors[modelData]
+                color: modelData[1]
                 Label {
                     padding: 8
                     anchors.centerIn: parent
-                    text: "%1: %2".arg(modelData).arg(parent.color)
+                    text: "%1: %2".arg(modelData[0]).arg(parent.color)
                     color: Theme.palette.white() // TODO contrasting color
                 }
             }
