@@ -76,6 +76,9 @@ class Palette : public QObject
     color.setAlphaF(qBound(0.f, alpha, 1.f));
     return color;
   }
+  Q_INVOKABLE inline constexpr QColor rgba(int r, int g, int b, float alpha = 1.f) const {
+      return {r, g, b, qBound(0, static_cast<int>(alpha * 255), 255)};
+  }
 
   // theme specific colors, to be implemented in light/dark palettes
   Q_INVOKABLE virtual QColor primaryColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
