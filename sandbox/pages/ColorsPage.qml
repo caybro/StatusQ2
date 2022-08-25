@@ -50,21 +50,18 @@ Pane {
         }
     }
 
-    component CustomizationRow: RowLayout {
+    component CustomizationRow: Flow {
+        Layout.preferredWidth: parent.width
+        spacing: 5
         Label {
-            Layout.preferredWidth: 100
+            width: 100
             text: "Customization:"
         }
-        ListView {
-            Layout.fillWidth: true
-            Layout.preferredHeight: 34
-            clip: true
-            spacing: 5
-            orientation: ListView.Horizontal
+        Repeater {
             model: Object.entries(Theme.palette.customizationColors)
             delegate: Rectangle {
                 width: customizationLabel.width
-                height: ListView.view.height
+                height: customizationLabel.height
                 color: modelData[1]
                 Label {
                     id: customizationLabel
@@ -77,18 +74,21 @@ Pane {
         }
     }
 
-    component IdenticonRow: RowLayout {
+    component IdenticonRow: Flow {
+        Layout.preferredWidth: parent.width
+        spacing: 5
         Label {
-            Layout.preferredWidth: 100
+            width: 100
             text: "Identicon:"
         }
         Repeater {
             model: Theme.palette.identiconColors
             delegate: Rectangle {
-                Layout.preferredWidth: childrenRect.width
-                Layout.preferredHeight: childrenRect.height
+                width: identiconLabel.width
+                height: identiconLabel.height
                 color: modelData
                 Label {
+                    id: identiconLabel
                     padding: 8
                     anchors.centerIn: parent
                     text: modelData
