@@ -6,6 +6,8 @@
 
 #include <utility> // std::pair
 
+// CSS rgba() function (https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba)
+// (allows for direct copying from Figma designs)
 constexpr QColor rgba(int r, int g, int b, float alpha = 1.f) {
   return {r, g, b, qBound(0, static_cast<int>(alpha * 255), 255)};
 }

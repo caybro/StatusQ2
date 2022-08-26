@@ -21,7 +21,7 @@ class StatusThemePlugin : public QQmlEngineExtensionPlugin
       QFontDatabase::addApplicationFont(QStringLiteral(":/assets/fonts/Inter/%1").arg(name));
     }
     auto font = QFont(QStringLiteral("Inter"));
-    font.setPixelSize(13);
+    font.setPixelSize(15);
     qApp->setFont(font);
   }
 };
