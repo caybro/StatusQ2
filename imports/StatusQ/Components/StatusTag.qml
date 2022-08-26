@@ -39,10 +39,8 @@ Button {
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
     spacing: 4
     horizontalPadding: size === StatusTag.Size.TwentyFourPx ? 12 : 16
-    verticalPadding: 0
+    verticalPadding: size === StatusTag.Size.TwentyFourPx ? 4 : 8
     // end T.Button
-
-    implicitHeight: size === StatusTag.Size.TwentyFourPx ? 24 : 32
 
     font.weight: Font.Medium
     font.pixelSize: size === StatusTag.Size.TwentyFourPx ? 11 : 13
