@@ -82,7 +82,7 @@ ApplicationWindow {
         ListView {
             id: pagesListView
             anchors.fill: parent
-            anchors.margins: 8
+            anchors.margins: Theme.metrics.halfPadding
             model: folderModel
             currentIndex: -1
             clip: true

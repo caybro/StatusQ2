@@ -9,7 +9,7 @@ T.ToolBar {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + verticalPadding)
 
-    horizontalPadding: 8
+    horizontalPadding: Theme.metrics.halfPadding
     verticalPadding: 0
 
     background: Rectangle {

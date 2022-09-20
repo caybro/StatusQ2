@@ -13,10 +13,10 @@ T.TextField {
                              contentHeight + topPadding + bottomPadding,
                              placeholder.implicitHeight + topPadding + bottomPadding)
 
-    leftPadding: 16
-    rightPadding: 16
-    topPadding: 8
-    bottomPadding: 8
+    leftPadding: Theme.metrics.padding
+    rightPadding: Theme.metrics.padding
+    topPadding: Theme.metrics.halfPadding
+    bottomPadding: Theme.metrics.halfPadding
     opacity: enabled ? 1 : Theme.palette.secondaryDisabledOpacity
     color: Theme.palette.textColor
     placeholderTextColor: Theme.palette.secondaryTextColor
@@ -26,7 +26,7 @@ T.TextField {
 
     font.weight: Font.Medium
 
-    property int spacing: 4
+    property int spacing: Theme.metrics.controlSpacing
 
     enum Type {
         Normal,

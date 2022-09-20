@@ -9,7 +9,7 @@ T.Pane {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              contentHeight + verticalPadding)
 
-    padding: 8
+    padding: Theme.metrics.halfPadding
 
     background: Rectangle {
         color: Theme.palette.backgroundColor

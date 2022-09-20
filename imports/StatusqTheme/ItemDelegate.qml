@@ -13,8 +13,8 @@ T.ItemDelegate {
                              implicitContentHeight + verticalPadding,
                              implicitIndicatorHeight + verticalPadding)
 
-    padding: 12
-    spacing: 8
+    padding: Theme.metrics.smallPadding
+    spacing: Theme.metrics.halfPadding
 
     icon.width: 20
     icon.height: 20

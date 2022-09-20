@@ -16,7 +16,7 @@ Pane {
 
         Label {
             id: label
-            padding: 8
+            padding: Theme.metrics.halfPadding
             anchors.centerIn: parent
             text: "<b>Neutral</b><br>Text: %1<br>Base: %2".arg(color).arg(parent.color)
         }
@@ -40,7 +40,7 @@ Pane {
                 Layout.preferredHeight: childrenRect.height
                 color: row.color(modelData)
                 Label {
-                    padding: 8
+                    padding: Theme.metrics.halfPadding
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData).arg(parent.color)
                     font.bold: modelData === Palette.Shade50
@@ -66,7 +66,7 @@ Pane {
                 color: modelData[1]
                 Label {
                     id: customizationLabel
-                    padding: 8
+                    padding: Theme.metrics.halfPadding
                     anchors.centerIn: parent
                     text: "%1: %2".arg(modelData[0]).arg(parent.color)
                     color: Theme.palette.white() // TODO contrasting color
@@ -90,7 +90,7 @@ Pane {
                 color: modelData
                 Label {
                     id: identiconLabel
-                    padding: 8
+                    padding: Theme.metrics.halfPadding
                     anchors.centerIn: parent
                     text: modelData
                     color: Theme.palette.white() // TODO contrasting color

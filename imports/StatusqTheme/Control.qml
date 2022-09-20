@@ -8,7 +8,7 @@ T.Control {
                             implicitContentWidth + horizontalPadding)
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + verticalPadding)
-    padding: 2
-    spacing: 4
+    padding: Theme.metrics.tinyPadding
+    spacing: Theme.metrics.controlSpacing
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
 }

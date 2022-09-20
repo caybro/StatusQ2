@@ -13,8 +13,8 @@ T.Switch {
                              implicitContentHeight + verticalPadding,
                              implicitIndicatorHeight + verticalPadding)
 
-    padding: 2
-    spacing: 4
+    padding: Theme.metrics.tinyPadding
+    spacing: Theme.metrics.controlSpacing
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
 
     readonly property int gap: 2

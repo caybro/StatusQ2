@@ -12,4 +12,5 @@ ColorImage {
     width: small ? 16 : 20
     height: small ? 16 : 20
     sourceSize: source.toString().endsWith(".svg") ? Qt.size(width, height) : undefined
+    Behavior on color { ColorAnimation { duration: 50 } }
 }

@@ -17,6 +17,7 @@ static bool qt_is_dark_system_theme()
 
 Theme::Theme(QObject *parent)
   : QObject{parent}
+  , m_metrics(std::make_unique<Metrics>(this))
 {
   setType(Palette::Type::Light);
 }
@@ -39,6 +40,11 @@ void Theme::setType(Palette::Type type)
 Palette *Theme::palette() const
 {
   return m_palette.get();
+}
+
+Metrics* Theme::metrics() const
+{
+  return m_metrics.get();
 }
 
 QFont Theme::font() const

@@ -15,6 +15,7 @@ SOURCES += \
         basepalette.cpp \
         lightpalette.cpp \
         darkpalette.cpp \
+        metrics.cpp \
         plugin.cpp \
         theme.cpp
 
@@ -22,6 +23,7 @@ HEADERS += \
     basepalette.h \
     lightpalette.h \
     darkpalette.h \
+    metrics.h \
     theme.h
 
 #RESOURCES += ../../../statusq.qrc

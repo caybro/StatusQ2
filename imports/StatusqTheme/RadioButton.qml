@@ -11,8 +11,8 @@ T.RadioButton {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + verticalPadding,
                              implicitIndicatorHeight + verticalPadding)
-    padding: 2
-    spacing: 4
+    padding: Theme.metrics.tinyPadding
+    spacing: Theme.metrics.controlSpacing
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
 
     indicator: Rectangle {
