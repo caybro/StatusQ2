@@ -28,6 +28,7 @@ Pane {
         property var color
         property var model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
             Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
+
         Label {
             Layout.preferredWidth: 100
             text: parent.text
@@ -54,9 +55,10 @@ Pane {
     component CustomizationRow: Flow {
         Layout.preferredWidth: parent.width
         spacing: 5
+
         Label {
             width: 100
-            text: "Customization:"
+            text: "Custom:"
         }
         Repeater {
             model: Object.entries(Theme.palette.customizationColors)
@@ -78,6 +80,7 @@ Pane {
     component IdenticonRow: Flow {
         Layout.preferredWidth: parent.width
         spacing: 5
+
         Label {
             width: 100
             text: "Identicon:"

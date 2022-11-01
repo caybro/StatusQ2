@@ -26,8 +26,6 @@ T.TextField {
 
     font.weight: Font.Medium
 
-    property int spacing: Theme.metrics.controlSpacing
-
     enum Type {
         Normal,
         Active,
