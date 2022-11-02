@@ -1,6 +1,5 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Controls.impl 2.15 // for ColorImage
 import QtQuick.Templates 2.15 as T
 
 import StatusQ.Core 1.0

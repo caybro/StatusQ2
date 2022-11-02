@@ -6,6 +6,7 @@ import StatusQ.Core.Theme 1.0
 
 T.RadioButton {
     id: root
+
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                             implicitContentWidth + horizontalPadding)
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,

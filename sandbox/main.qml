@@ -95,7 +95,7 @@ ApplicationWindow {
                 onClicked: {
                     if (index !== ListView.view.currentIndex) {
                         ListView.view.currentIndex = index
-                        stack.push("qrc" + model.filePath)
+                        stack.replace("qrc" + model.filePath)
                     }
                     drawer.close()
                 }
