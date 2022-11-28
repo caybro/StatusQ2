@@ -24,12 +24,8 @@ Pane {
             placeholderText: "Success :)"
         }
         TextField {
-            type: TextField.Type.Warning
-            placeholderText: "Warning!"
-        }
-        TextField {
             type: TextField.Type.Danger
-            placeholderText: "Danger!!!"
+            placeholderText: "Danger!"
         }
     }
 }

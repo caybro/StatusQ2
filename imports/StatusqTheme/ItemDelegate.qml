@@ -30,7 +30,7 @@ T.ItemDelegate {
         implicitWidth: 100
         implicitHeight: 40
         visible: root.down || root.highlighted || root.visualFocus
-        color: Theme.palette.baseColor
+        color: Theme.palette.secondaryBaseColor
     }
 
     HoverHandler {

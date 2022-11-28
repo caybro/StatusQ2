@@ -21,6 +21,9 @@ class Palette : public QObject
   Q_PROPERTY(QString name READ name CONSTANT)
   Q_PROPERTY(Palette::Type type READ type CONSTANT)
 
+  Q_PROPERTY(QColor primaryColor READ primaryColor CONSTANT)
+  Q_PROPERTY(QColor successColor READ successColor CONSTANT)
+  Q_PROPERTY(QColor dangerColor READ dangerColor CONSTANT)
   Q_PROPERTY(QColor transparent READ transparent CONSTANT)
   Q_PROPERTY(QColor backgroundColor READ backgroundColor CONSTANT)
   Q_PROPERTY(QColor baseColor READ baseColor CONSTANT)
@@ -53,6 +56,7 @@ class Palette : public QObject
     Shade80,
     Shade90,
     Shade95,
+    Shade100,
   };
   Q_ENUM(Shade)
 
@@ -83,13 +87,6 @@ class Palette : public QObject
     return color;
   }
 
-  // theme specific colors, to be implemented in light/dark palettes
-  Q_INVOKABLE virtual QColor primaryColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
-  Q_INVOKABLE virtual QColor successColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
-  Q_INVOKABLE virtual QColor infoColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
-  Q_INVOKABLE virtual QColor warningColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
-  Q_INVOKABLE virtual QColor dangerColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const = 0;
-
  protected:
   // helper
   static constexpr auto getColor = [](const QColor &defaultColor, const auto &container, Palette::Shade shade,
@@ -109,6 +106,10 @@ class Palette : public QObject
   };
 
   // theme specific color properties, to be implemented in light/dark palettes
+  virtual QColor primaryColor() const = 0;
+  virtual QColor successColor() const = 0;
+  virtual QColor dangerColor() const = 0;
+
   virtual QColor backgroundColor() const = 0;
   virtual QColor baseColor() const = 0;
   virtual QColor secondaryBaseColor() const = 0;

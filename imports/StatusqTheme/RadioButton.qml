@@ -20,17 +20,18 @@ T.RadioButton {
         height: root.height
         width: height
         radius: width/2
-        anchors.verticalCenter: parent.verticalCenter
-        color: root.checked ? Theme.palette.primaryColor()
-                            : Theme.palette.baseColor
-        Behavior on color { ColorAnimation { duration: 50 } }
+        color: "transparent"
+        border.width: 1.2
+        border.color: root.checked ? Theme.palette.primaryColor
+                                   : Theme.palette.secondaryBaseColor
+        Behavior on border.color { ColorAnimation { duration: 50 } }
 
         Rectangle {
-            width: height
-            height: (parent.height/4).toFixed(0) // try hard to keep it in the real center, avoid rounding errors
+            width: parent.width - Theme.metrics.smallPadding
+            height: width
             radius: width/2
             anchors.centerIn: parent
-            color: Theme.palette.backgroundColor
+            color: parent.border.color
             opacity: root.checked ? 1 : 0
             visible: opacity
             Behavior on opacity { NumberAnimation { duration: 50 } }

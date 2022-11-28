@@ -15,7 +15,6 @@ Button {
         Normal,
         Primary,
         Success,
-        Warning,
         Error
     }
     property int type: StatusTag.Type.Normal
@@ -54,13 +53,11 @@ Button {
         readonly property color baseColor: {
             switch (root.type) {
             case StatusTag.Type.Primary:
-                return Theme.palette.primaryColor()
+                return Theme.palette.primaryColor
             case StatusTag.Type.Success:
-                return Theme.palette.successColor()
-            case StatusTag.Type.Warning:
-                return Theme.palette.warningColor()
+                return Theme.palette.successColor
             case StatusTag.Type.Error:
-                return Theme.palette.dangerColor()
+                return Theme.palette.dangerColor
             default:
                 return Theme.palette.textColor
             }

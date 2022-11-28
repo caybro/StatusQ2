@@ -26,7 +26,7 @@ Pane {
         id: row
         property string text
         property var color
-        property var model: [Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
+        property var model: [Palette.Shade100, Palette.Shade95, Palette.Shade90, Palette.Shade80, Palette.Shade70, Palette.Shade60,
             Palette.Shade50, Palette.Shade40, Palette.Shade30, Palette.Shade20, Palette.Shade10, Palette.Shade5]
 
         Label {
@@ -134,29 +134,19 @@ Pane {
             color: (shade) => Theme.palette.neutralColor(shade)
         }
 
-        ColorRow {
-            text: "Primary:"
-            color: (shade) => Theme.palette.primaryColor(shade)
+        ColorTile {
+            text: "Primary"
+            color: Theme.palette.primaryColor
         }
 
-        ColorRow {
-            text: "Success:"
-            color: (shade) => Theme.palette.successColor(shade)
+        ColorTile {
+            text: "Success"
+            color: Theme.palette.successColor
         }
 
-        ColorRow {
-            text: "Info:"
-            color: (shade) => Theme.palette.infoColor(shade)
-        }
-
-        ColorRow {
-            text: "Warning:"
-            color: (shade) => Theme.palette.warningColor(shade)
-        }
-
-        ColorRow {
-            text: "Danger:"
-            color: (shade) => Theme.palette.dangerColor(shade)
+        ColorTile {
+            text: "Danger"
+            color: Theme.palette.dangerColor
         }
 
         CustomizationRow {}

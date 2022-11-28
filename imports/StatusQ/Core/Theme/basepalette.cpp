@@ -1,21 +1,22 @@
 #include "basepalette.h"
 
 namespace {
-constexpr QColor kNeutralSolidColor{100, 112, 132}; // #647084
+constexpr QColor kNeutralSolidColor{rgba(100, 112, 132, 1)};
 
 // common neutral colors, for both themes
-constexpr std::array<Palette::ColorPair, 11> kNeutralColors = {{
-  {Palette::Shade95, {9, 16, 28}},  // #09101C
-  {Palette::Shade90, {13, 22, 37}}, // #0D1625
-  {Palette::Shade80, {19, 29, 47}}, // #131D2F
-  {Palette::Shade70, {25, 36, 56}}, // #192438
-  {Palette::Shade60, {48, 61, 85}}, // #303D55
+constexpr std::array<Palette::ColorPair, 12> kNeutralColors = {{
+  {Palette::Shade100, rgba(9, 16, 28, 1)},
+  {Palette::Shade95, rgba(13, 22, 37, 1)},
+  {Palette::Shade90, rgba(19, 29, 47, 1)},
+  {Palette::Shade80, rgba(27, 39, 61, 1)},
+  {Palette::Shade70, rgba(32, 44, 66, 1)},
+  {Palette::Shade60, rgba(48, 61, 85, 1)},
   {Palette::Shade50, kNeutralSolidColor},
-  {Palette::Shade40, {161, 171, 189}}, // #A1ABBD
-  {Palette::Shade30, {231, 234, 238}}, // #E7EAEE
-  {Palette::Shade20, {236, 238, 241}}, // #ECEEF1
-  {Palette::Shade10, {240, 242, 245}}, // #F0F2F5
-  {Palette::Shade5, {245, 246, 248}} // #F5F6F8
+  {Palette::Shade40, rgba(161, 171, 189, 1)},
+  {Palette::Shade30, rgba(220, 224, 229, 1)},
+  {Palette::Shade20, rgba(231, 234, 238, 1)},
+  {Palette::Shade10, rgba(240, 242, 245, 1)},
+  {Palette::Shade5, rgba(245, 246, 248, 1)}
 }};
 } // namespace
 

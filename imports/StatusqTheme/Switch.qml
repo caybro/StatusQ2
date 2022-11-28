@@ -17,20 +17,18 @@ T.Switch {
     spacing: Theme.metrics.controlSpacing
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
 
-    readonly property int gap: 2
-
     indicator: Rectangle {
         height: root.height
-        width: root.height*2 - root.gap*2
+        width: root.height*2 - Theme.metrics.tinyPadding*2
         radius: height/2
         anchors.verticalCenter: parent.verticalCenter
-        color: root.checked ? Theme.palette.primaryColor() : Theme.palette.baseColor
+        color: root.checked ? Theme.palette.primaryColor : Theme.palette.secondaryBaseColor
         Behavior on color { ColorAnimation { duration: 50 } }
 
         Rectangle {
-            width: parent.width/2 - root.gap
+            width: parent.width/2 - Theme.metrics.tinyPadding
             height: width
-            x: root.visualPosition * (parent.width - width) + (root.checked ? -root.gap : root.gap)
+            x: root.visualPosition * (parent.width - width) + (root.checked ? -Theme.metrics.tinyPadding : Theme.metrics.tinyPadding)
             Behavior on x { PropertyAnimation { duration: 100 } }
             anchors.verticalCenter: parent.verticalCenter
             radius: width/2

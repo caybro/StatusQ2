@@ -18,11 +18,9 @@ class DarkPalette final : public Palette
   QColor textColor() const override;
   QColor secondaryTextColor() const override;
 
-  QColor primaryColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
-  QColor successColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
-  QColor infoColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
-  QColor warningColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
-  QColor dangerColor(Palette::Shade shade = Palette::Shade50, float alpha = 1.f) const override;
+  QColor primaryColor() const override;
+  QColor successColor() const override;
+  QColor dangerColor() const override;
 
   QVariantMap customizationColors() const override;
 };

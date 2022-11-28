@@ -21,10 +21,10 @@ T.CheckBox {
     indicator: Rectangle {
         height: root.height
         width: height
-        radius: width/2
+        radius: Theme.metrics.smallPadding // FIXME wrong naming
         anchors.verticalCenter: parent.verticalCenter
-        color: root.checkState === Qt.Unchecked ? Theme.palette.baseColor
-                                                : Theme.palette.primaryColor()
+        color: root.checkState === Qt.Unchecked ? Theme.palette.secondaryBaseColor
+                                                : Theme.palette.primaryColor
         Behavior on color { ColorAnimation { duration: 50 } }
 
         StatusIcon {
@@ -32,7 +32,7 @@ T.CheckBox {
             small: true
             icon: "Checkmark"
             visible: root.checkState === Qt.Checked
-            color: Theme.palette.backgroundColor
+            color: Theme.palette.white()
         }
 
         StatusIcon {
@@ -42,7 +42,7 @@ T.CheckBox {
             small: true
             icon: "Indeterminate"
             visible: root.checkState === Qt.PartiallyChecked
-            color: Theme.palette.backgroundColor
+            color: Theme.palette.white()
         }
     }
 

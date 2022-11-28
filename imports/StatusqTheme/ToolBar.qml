@@ -11,9 +11,4 @@ T.ToolBar {
 
     horizontalPadding: Theme.metrics.halfPadding
     verticalPadding: 0
-
-    background: Rectangle {
-        color: Theme.palette.baseColor
-        Behavior on color { ColorAnimation { duration: 50 } }
-    }
 }

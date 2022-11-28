@@ -13,8 +13,7 @@ Pane {
         width: parent.width
 
         Repeater {
-            model: [StatusTag.Type.Normal, StatusTag.Type.Primary, StatusTag.Type.Success, StatusTag.Type.Warning,
-                StatusTag.Type.Error]
+            model: [StatusTag.Type.Normal, StatusTag.Type.Primary, StatusTag.Type.Success, StatusTag.Type.Error]
             ColumnLayout {
                 width: parent.width
 

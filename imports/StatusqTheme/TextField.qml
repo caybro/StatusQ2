@@ -20,7 +20,7 @@ T.TextField {
     opacity: enabled ? 1 : Theme.palette.secondaryDisabledOpacity
     color: Theme.palette.textColor
     placeholderTextColor: Theme.palette.secondaryTextColor
-    selectionColor: Theme.palette.primaryColor()
+    selectionColor: Theme.palette.primaryColor
     selectedTextColor: Theme.palette.white()
     selectByMouse: true
 
@@ -30,10 +30,9 @@ T.TextField {
         Normal,
         Active,
         Success,
-        Warning,
         Danger
     }
-    property int type: TextField.Type.Normal
+    property int type: TextField.Type.Normal // FIXME remove me
 
     Label {
         id: placeholder
@@ -53,21 +52,22 @@ T.TextField {
     background: Rectangle {
         implicitWidth: height*10
         height: root.height
-        radius: 20 // FIXME calculate it
-        color: Theme.palette.secondaryBaseColor
+        radius: 12 // FIXME calculate it
+        //color: Theme.palette.secondaryBaseColor
         border.width: 1
         border.color: {
             if (root.type === TextField.Type.Success) {
-                return Theme.palette.successColor()
-            } else if (root.type === TextField.Type.Warning) {
-                return Theme.palette.warningColor()
+                return Theme.palette.successColor
             } else if (root.type === TextField.Type.Danger) {
-                return Theme.palette.dangerColor()
-            } else if (root.focus || root.type === TextField.Type.Active) {
-                return Theme.palette.primaryColor()
+                return Theme.palette.dangerColor
+            } else if (root.type === TextField.Type.Active) {
+                return Theme.palette.primaryColor
             }
 
-            return "transparent"
+            if (root.focus)
+                return Theme.palette.baseColor
+
+            return Theme.palette.secondaryBaseColor
         }
         Behavior on border.color { ColorAnimation { duration: 50 } }
     }

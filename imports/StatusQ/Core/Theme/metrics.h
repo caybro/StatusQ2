@@ -34,7 +34,7 @@ class Metrics : public QObject
   constexpr inline int halfPadding() const { return m_halfPadding; };
   int m_halfPadding{8};
   constexpr inline int smallPadding() const { return m_smallPadding; };
-  int m_smallPadding{10};
+  int m_smallPadding{6};
   constexpr inline int tinyPadding() const { return m_tinyPadding; };
   int m_tinyPadding{2};
 
