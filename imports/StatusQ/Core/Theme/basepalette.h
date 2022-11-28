@@ -32,6 +32,7 @@ class Palette : public QObject
   Q_PROPERTY(QColor secondaryTextColor READ secondaryTextColor CONSTANT)
   Q_PROPERTY(QVariantMap customizationColors READ customizationColors CONSTANT)
   Q_PROPERTY(QList<QColor> identiconColors READ identiconColors CONSTANT)
+  Q_PROPERTY(QVariantMap networkColors READ networkColors CONSTANT)
 
   Q_PROPERTY(float disabledOpacity READ disabledOpacity CONSTANT)
   Q_PROPERTY(float secondaryDisabledOpacity READ secondaryDisabledOpacity CONSTANT)
@@ -121,6 +122,7 @@ class Palette : public QObject
   // general color properties
   inline constexpr QColor transparent() const { return QColorConstants::Transparent; }
   QList<QColor> identiconColors() const;
+  QVariantMap networkColors() const;
 
   // general palette-related properties
   inline constexpr float disabledOpacity() const { return 0.5; }

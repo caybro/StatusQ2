@@ -52,16 +52,21 @@ Pane {
         }
     }
 
-    component CustomizationRow: Flow {
+    component NamedColorsRow: Flow {
+        id: namedColorsRow
+
+        property var model
+        property string label
+
         Layout.preferredWidth: parent.width
         spacing: 5
 
         Label {
             width: 100
-            text: "Custom:"
+            text: namedColorsRow.label
         }
         Repeater {
-            model: Object.entries(Theme.palette.customizationColors)
+            model: Object.entries(namedColorsRow.model)
             delegate: Rectangle {
                 width: customizationLabel.width
                 height: customizationLabel.height
@@ -149,8 +154,16 @@ Pane {
             color: Theme.palette.dangerColor
         }
 
-        CustomizationRow {}
+        NamedColorsRow {
+            label: "Custom:"
+            model: Theme.palette.customizationColors
+        }
 
         IdenticonRow {}
+
+        NamedColorsRow {
+            label: "Networks:"
+            model: Theme.palette.networkColors
+        }
     }
 }
