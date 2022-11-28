@@ -53,9 +53,12 @@ T.TextField {
         implicitWidth: height*10
         height: root.height
         radius: 12 // FIXME calculate it
-        //color: Theme.palette.secondaryBaseColor
+        color: root.readOnly || !root.enabled ? Theme.palette.secondaryBaseColor : "transparent"
         border.width: 1
         border.color: {
+            if (root.readOnly || !root.enabled)
+                return "transparent"
+
             if (root.type === TextField.Type.Success) {
                 return Theme.palette.successColor
             } else if (root.type === TextField.Type.Danger) {

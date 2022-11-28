@@ -20,6 +20,10 @@ Pane {
             text: "Disabled Text Field"
         }
         TextField {
+            readOnly: true
+            text: "Readonly Text Field"
+        }
+        TextField {
             type: TextField.Type.Success
             placeholderText: "Success :)"
         }
