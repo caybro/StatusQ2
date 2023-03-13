@@ -6,7 +6,7 @@ import StatusQ.Core.Theme 1.0
 T.Label {
     opacity: enabled ? 1 : Theme.palette.disabledOpacity
     color: Theme.palette.textColor
-    linkColor: hoveredLink ? Qt.lighter(Theme.palette.primaryColor, 1.2) : Theme.palette.primaryColor
+    linkColor: hoveredLink ? Qt.lighter(Theme.palette.primaryColor, 1.3) : Theme.palette.primaryColor // FIXME provide a universal Theme.hoverColor(color)
     verticalAlignment: Text.AlignVCenter
 
     onLinkActivated: if (link) Qt.openUrlExternally(link)
