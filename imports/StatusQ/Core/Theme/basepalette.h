@@ -8,7 +8,8 @@
 
 // CSS rgba() function (https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba)
 // (allows for direct copying from Figma designs)
-constexpr QColor rgba(int r, int g, int b, float alpha = 1.f) {
+constexpr QColor rgba(int r, int g, int b, float alpha = 1.f)
+{
   return {r, g, b, qBound(0, static_cast<int>(alpha * 255), 255)};
 }
 
@@ -82,7 +83,8 @@ class Palette : public QObject
   {
     return {255, 255, 255, qBound(0, static_cast<int>(alpha * 255), 255)};
   }
-  Q_INVOKABLE inline QColor alphaColor(const QColor& base, float alpha = 1.f) const {
+  Q_INVOKABLE inline QColor alphaColor(const QColor &base, float alpha = 1.f) const
+  {
     QColor color(base);
     color.setAlphaF(qBound(0.f, alpha, 1.f));
     return color;

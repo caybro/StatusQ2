@@ -1,6 +1,5 @@
 #include "darkpalette.h"
 
-
 DarkPalette::DarkPalette(QObject *parent)
   : Palette{parent}
 {}

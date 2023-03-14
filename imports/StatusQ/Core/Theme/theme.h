@@ -7,8 +7,8 @@
 #include <memory>
 
 #include "basepalette.h"
-#include "metrics.h"
 #include "fonts.h"
+#include "metrics.h"
 
 class Theme : public QObject
 {
