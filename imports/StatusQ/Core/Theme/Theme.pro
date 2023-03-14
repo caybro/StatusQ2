@@ -21,6 +21,7 @@ SOURCES += \
 
 HEADERS += \
     basepalette.h \
+    fonts.h \
     lightpalette.h \
     darkpalette.h \
     metrics.h \

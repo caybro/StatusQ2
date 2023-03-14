@@ -10,14 +10,15 @@ namespace {
 static bool qt_is_dark_system_theme()
 {
   auto pal = qApp->palette();
-  const QColor& textColor = pal.color(QPalette::WindowText);
+  const QColor &textColor = pal.color(QPalette::WindowText);
   return textColor.red() > 128 && textColor.blue() > 128 && textColor.green() > 128;
 }
-}
+} // namespace
 
 Theme::Theme(QObject *parent)
   : QObject{parent}
   , m_metrics(std::make_unique<Metrics>(this))
+  , m_fonts(std::make_unique<Fonts>(this))
 {
   setType(Palette::Type::Light);
 }
@@ -42,12 +43,12 @@ Palette *Theme::palette() const
   return m_palette.get();
 }
 
-Metrics* Theme::metrics() const
+Metrics *Theme::metrics() const
 {
   return m_metrics.get();
 }
 
-QFont Theme::font() const
+Fonts *Theme::fonts() const
 {
-  return qApp->font();
+  return m_fonts.get();
 }

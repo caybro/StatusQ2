@@ -19,7 +19,6 @@
         <file>assets/fonts/Inter/Inter-SemiBoldItalic.otf</file>
         <file>assets/fonts/Inter/Inter-Thin.otf</file>
         <file>assets/fonts/Inter/Inter-ThinItalic.otf</file>
-        <file>assets/fonts/Inter/Inter-V.otf</file>
         <file>StatusqTheme/Label.qml</file>
         <file>StatusqTheme/ItemDelegate.qml</file>
         <file>StatusqTheme/Control.qml</file>
@@ -38,5 +37,9 @@
         <file>StatusQ/Core/StatusIcon.qml</file>
         <file>StatusQ/Components/qmldir</file>
         <file>StatusQ/Components/StatusTag.qml</file>
+        <file>assets/fonts/UbuntuMono/UbuntuMono-Bold.ttf</file>
+        <file>assets/fonts/UbuntuMono/UbuntuMono-BoldItalic.ttf</file>
+        <file>assets/fonts/UbuntuMono/UbuntuMono-Italic.ttf</file>
+        <file>assets/fonts/UbuntuMono/UbuntuMono-Regular.ttf</file>
     </qresource>
 </RCC>

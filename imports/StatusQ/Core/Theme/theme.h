@@ -8,6 +8,7 @@
 
 #include "basepalette.h"
 #include "metrics.h"
+#include "fonts.h"
 
 class Theme : public QObject
 {
@@ -18,8 +19,8 @@ class Theme : public QObject
 
   Q_PROPERTY(Palette::Type type READ type WRITE setType NOTIFY themeChanged)
   Q_PROPERTY(Palette *palette READ palette NOTIFY themeChanged)
-  Q_PROPERTY(QFont font READ font CONSTANT)
   Q_PROPERTY(Metrics *metrics READ metrics CONSTANT)
+  Q_PROPERTY(Fonts *fonts READ fonts CONSTANT)
 
  public:
   explicit Theme(QObject *parent = nullptr);
@@ -37,6 +38,6 @@ class Theme : public QObject
   Metrics *metrics() const;
   std::unique_ptr<Metrics> m_metrics;
 
-  // fonts are setup/loaded in plugin.cpp
-  QFont font() const;
+  Fonts *fonts() const;
+  std::unique_ptr<Fonts> m_fonts;
 };
