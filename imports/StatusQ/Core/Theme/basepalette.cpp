@@ -47,13 +47,13 @@ QList<QColor> Palette::identiconColors() const
 QVariantMap Palette::networkColors() const
 {
   return {
-    {QStringLiteral("Ethereum"), rgba(117, 142, 235, 1)},
-    {QStringLiteral("Optimism"), rgba(231, 110, 110, 1)},
-    {QStringLiteral("Arbitrum"), rgba(107, 213, 240, 1)},
+    {QStringLiteral("ethereum"), rgba(117, 142, 235, 1)},
+    {QStringLiteral("optimism"), rgba(231, 110, 110, 1)},
+    {QStringLiteral("arbitrum"), rgba(107, 213, 240, 1)},
     {QStringLiteral("zkSync"), rgba(159, 160, 254, 1)},
-    {QStringLiteral("Hermez"), rgba(235, 132, 98, 1)},
+    {QStringLiteral("hermez"), rgba(235, 132, 98, 1)},
     {QStringLiteral("xDAI"), rgba(63, 192, 189, 1)},
-    {QStringLiteral("Polygon"), rgba(173, 113, 243, 1)},
-    {QStringLiteral("Unknown"), rgba(238, 242, 245, 1)}
+    {QStringLiteral("polygon"), rgba(173, 113, 243, 1)},
+    {QStringLiteral("unknown"), rgba(238, 242, 245, 1)}
   };
 }
